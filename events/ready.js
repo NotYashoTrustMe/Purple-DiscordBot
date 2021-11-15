@@ -14,11 +14,11 @@ module.exports = {
             (async () => {
                 try {
                     if (process.env.STAGE == 'production') {
-                        await rest.put(Routes.applicationCommands(process.env.CLIENT_ID), { body: commands });
+                        await rest.put(Routes.applicationCommands(client.user.id), { body: commands });
                         console.log('\u001B[36mRegistered Commands \u001B[32mGlobally ✔️\u001B[0m');
                     }
                     else {											  
-                        await rest.put(Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID), {
+                        await rest.put(Routes.applicationGuildCommands(client.user.id, process.env.GUILD_ID), {
                             body : commands
                         });	
                         console.log('\u001B[36mRegistered Commands\u001B[33m Locally ✔️\u001B[0m');
@@ -34,7 +34,7 @@ module.exports = {
 
             client.user.setActivity('Commands | /help', { type: 'Playing' });
 
-            let generalChannel = client.channels.cache.get('908601642075693086');
-            generalChannel.send('Hi, Everyone!');
+            let botCommandsChannel = client.channels.cache.get(process.env.BOT_COMMANDS_CHANNEL);
+            botCommandsChannel.send('Hi, Everyone!');
     }
 }
