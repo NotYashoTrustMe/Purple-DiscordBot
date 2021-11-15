@@ -1,12 +1,4 @@
-/*
-* npm install --save-dev nodemon
-* npm install -g nodemon
-* npm install discord.js
-* npm install dotenv
-* npm install @discordjs/rest
-* npm install discord-api-types 
-* npm install @discordjs/builders
-*/
+/*npm install*/
 
 require('dotenv').config();
 const Discord = require('discord.js');
