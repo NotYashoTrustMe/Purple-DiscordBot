@@ -52,7 +52,7 @@ module.exports = {
 				});
 			})
 			.catch((HTTPError) => {
-				interaction.editReply("The subreddit is either NSFW or doesn't exist: `r/{subreddit_name}`");
+				interaction.editReply("The subreddit is either NSFW or doesn't exist");
 			});
 		//
 	}
