@@ -14,17 +14,11 @@ module.exports = {
         ),
 	async execute(interaction) {
 		const embed = new Discord.MessageEmbed();
-<<<<<<< HEAD
 		let subreddit_input = interaction.options.getString("subreddit")
 		if (subreddit_input.indexOf("r/") !== -1) {}
 		else{subreddit_input="r/"+subreddit_input}
 		let subreddit = "r/memes"
 		if (subreddit_input) { subreddit = subreddit_input.replace(/\s/g,"") }
-=======
-		const subreddit_input = interaction.options.getString("subreddit")
-		let subreddit = "r/memes"
-		if (subreddit_input) { subreddit = subreddit_input }
->>>>>>> upstream/master
 		await interaction.deferReply();
 			got(`https://www.reddit.com/${subreddit}/random/.json`)
 				.then(response => {
@@ -44,11 +38,7 @@ module.exports = {
 
 					interaction.editReply({ embeds: [embed] })
 				}).catch((HTTPError) => {
-<<<<<<< HEAD
 					interaction.editReply('The subreddit is either NSFW or doesn\'t exist: `r/{subreddit_name}`')
-=======
-					interaction.editReply('The subreddit should be in this form: `r/{subreddit_name}`')
->>>>>>> upstream/master
 				})
 			// 
 	}
