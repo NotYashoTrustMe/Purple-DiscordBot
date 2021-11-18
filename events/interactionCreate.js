@@ -1,6 +1,6 @@
 require('dotenv').config();
 module.exports = {
-	name : 'interactionCreate',
+	name    : 'interactionCreate',
 
 	async execute(interaction) {
 		if (!interaction.isCommand()) return;

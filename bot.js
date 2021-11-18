@@ -5,13 +5,12 @@ const Discord = require('discord.js');
 const fs = require('fs');
 
 const client = new Discord.Client({
-	intents: [
+	intents : [
 		Discord.Intents.FLAGS.GUILDS,
 		Discord.Intents.FLAGS.GUILD_MESSAGES,
 		Discord.Intents.FLAGS.GUILD_MEMBERS
 	]
 });
-
 
 const commandFiles = fs.readdirSync('./commands').filter((file) => file.endsWith('.js'));
 
@@ -32,9 +31,9 @@ for (const file of eventFiles) {
 
 	if (event.once) {
 		client.once(event.name, (...args) => event.execute(...args, commands));
-	} else {
+	}
+	else {
 		client.on(event.name, (...args) => event.execute(...args, commands));
-
 	}
 }
 
