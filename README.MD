@@ -22,7 +22,7 @@
 1. Create a new app from [Discord Developer Portal](https://discord.com/developers/applications)
 1. Get the `TOKEN` and store it somewhere safe. [_Keep it a secret_]
 1. Open `.environ` file and rename it to `.env` and fill up the following (if you're running this from your PC): 
-    - `TOKEN` - The Token you got from [Discord Developer Portal](https://discord.com/developers/)"
+    - `TOKEN` - The Token you got from [Discord Developer Portal](https://discord.com/developers/)
     - `GUILD_ID`= Your Server's ID
     - `GENERAL_CHANNEL`= The general channel of your server (To direct the new members to that channel)
     - `BOT_COMMANDS_CHANNEL`= The bot commands channel ID
