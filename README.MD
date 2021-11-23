@@ -1,4 +1,4 @@
-![Yasho](images/Purple-banner.png) 
+![Yasho](https://i.imgur.com/3qGmuev.png) 
 
 # Purple - A Discord JS bot (Beta)
 
@@ -8,8 +8,7 @@
 > An open-source discord bot with feaures such as memes, quotes, moderation and auto role assignment.
 
 ### Launguage: <br>
-<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
-<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">
 
 ## Features
 - Calculate Mathematical Equation
@@ -23,7 +22,7 @@
 1. Create a new app from [Discord Developer Portal](https://discord.com/developers/applications)
 1. Get the `TOKEN` and store it somewhere safe. [_Keep it a secret_]
 1. Open `.environ` file and rename it to `.env` and fill up the following (if you're running this from your PC): 
-    - `TOKEN` - The Token you got from [Discord Developer Portal](https://discord.com/developers/)"
+    - `TOKEN` - The Token you got from [Discord Developer Portal](https://discord.com/developers/)
     - `GUILD_ID`= Your Server's ID
     - `GENERAL_CHANNEL`= The general channel of your server (To direct the new members to that channel)
     - `BOT_COMMANDS_CHANNEL`= The bot commands channel ID
