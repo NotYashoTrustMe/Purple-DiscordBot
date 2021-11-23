@@ -1,0 +1,33 @@
+{
+    "name": "Purple-DiscordBot",
+    "description": "An open-source discord bot with feaures such as memes, quotes, moderation and auto role assignment.",
+    "logo": "https://i.imgur.com/NoHbJTk.png",
+    "env": {
+        "TOKEN": {
+            "description": "Your Discord Bot's Token | Example: GTEsdNjQ2MjIxasdU2Njk2OTcl.dgscEQQ.0gjhNbGeWBsKP6FVuIyZWlG2cMd",
+            "required": true
+        },
+        "GUILD_ID": {
+            "description": "Your Server ID | Example: 222078108977594368",
+            "required": true
+        },
+        "STAGE":
+        {
+            "description": "In which stage do you want the bot to run in (PRODUCTION / DEVELOPMENT)",
+            "required": false
+        },
+        "GENERAL_CHANNEL": {
+            "description": "The ID of your General Channel | Example: 893053479038357524",
+            "required": true
+        },
+        "BOT_COMMANDS_CHANNEL": {
+            "description": "The ID of your Bot Commands Channel | Example: 908601642075693086",
+            "required": true
+        },
+        "MEMBER_LOG_CHANNEL": {
+            "description": "The ID of your Member Log Channel | Example: 909047268513038397",
+            "required": true
+        }
+    },
+    "repository": "https://github.com/Yasho022/Purple-DiscordBot"
+    }
