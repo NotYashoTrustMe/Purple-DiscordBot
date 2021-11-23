@@ -1,4 +1,4 @@
-![Yasho](images/Purple-banner.png) 
+![Yasho](https://i.imgur.com/3qGmuev.png) 
 
 # Purple - A Discord JS bot (Beta)
 
