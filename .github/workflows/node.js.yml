@@ -13,7 +13,13 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+      TOKEN: "OTA4MjAxNzgwNDk0NjA2MzU2.YYyS0g.ONcXiY3cxw3-w6d6Ws_d3v_VBgg"
+      GUILD_ID: "875991927210786848"
+      STAGE: "development"
+      GENERAL_CHANNEL: "893053479038357524"
+      BOT_COMMANDS_CHANNEL: "908601642075693086"
+      MEMBER_LOG_CHANNEL: "909047268513038397"
     strategy:
       matrix:
         node-version: [v16.13.0]
@@ -28,3 +34,4 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
+    - run: npm start
