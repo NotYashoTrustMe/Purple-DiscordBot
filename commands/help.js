@@ -15,7 +15,7 @@ var Embed = new Discord.MessageEmbed()
 			value :
 				'• Calculate an equation.\n • `-` for Substraction. `(ex. - 10 - 2 => 8)`\n • `+` for Addition. `(ex. - 10 + 2 => 12)`\n • `*` for Multiplication. `(ex. - 10 * 2 => 20)`\n • `/` for Division. `(ex. - 10 / 2 => 5)`\n • `%` for Remainder. `(ex. - 10 % 2 => 0, 10 % 3 => 1)`'
 		},
-		{ name: 'meme:', value: '• Get a Random Meme From Reddit (subreddit: `r/{subreddit}`)' },
+		{ name: 'meme:', value: '• Get a Random Meme From Reddit (subreddit: `subreddit name`)' },
 		{ name: '\u200B', value: '\u200B' }
 	)
 	.setTimestamp()

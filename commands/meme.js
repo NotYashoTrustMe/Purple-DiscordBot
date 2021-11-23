@@ -15,13 +15,10 @@ module.exports = {
 	async execute(interaction) {
 		const embed = new Discord.MessageEmbed();
 		let subreddit_input = interaction.options.getString('subreddit');
-		if (subreddit_input.indexOf('r/') !== -1) {
-		}
-		else {
-			subreddit_input = 'r/' + subreddit_input;
-		}
 		let subreddit = 'r/memes';
 		if (subreddit_input) {
+			if (subreddit_input.indexOf('r/') !== -1) subreddit_input.replace('r/', '').trim();
+			else subreddit_input = 'r/' + subreddit_input;
 			subreddit = subreddit_input.replace(/\s/g, '');
 		}
 		await interaction.deferReply();
@@ -46,7 +43,7 @@ module.exports = {
 				embed.setFooter(`Source: ${subreddit}`);
 
 				interaction.editReply({
-					embeds: [
+					embeds : [
 						embed
 					]
 				});

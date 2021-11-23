@@ -17,7 +17,7 @@ module.exports = {
 			.setTimestamp();
 
 		member.guild.channels.cache.get(memeberChannel).send({
-			embeds: [
+			embeds : [
 				memberEmbed
 			]
 		});

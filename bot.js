@@ -1,22 +1,22 @@
 /*npm install*/
 
 require('dotenv').config();
-const Discord = require('discord.js');
-const fs = require('fs');
+const { readdirSync } = require('fs');
+const { Client, Intents, Collection } = require('discord.js');
 
-const client = new Discord.Client({
+const client = new Client({
 	intents : [
-		Discord.Intents.FLAGS.GUILDS,
-		Discord.Intents.FLAGS.GUILD_MESSAGES,
-		Discord.Intents.FLAGS.GUILD_MEMBERS
+		Intents.FLAGS.GUILDS,
+		Intents.FLAGS.GUILD_MESSAGES,
+		Intents.FLAGS.GUILD_MEMBERS
 	]
 });
 
-const commandFiles = fs.readdirSync('./commands').filter((file) => file.endsWith('.js'));
+const commandFiles = readdirSync('./commands').filter((file) => file.endsWith('.js'));
 
 var commands = [];
 
-client.commands = new Discord.Collection();
+client.commands = new Collection();
 
 for (var file of commandFiles) {
 	var command = require(`./commands/${file}`);
@@ -24,7 +24,7 @@ for (var file of commandFiles) {
 	client.commands.set(command.data.name, command);
 }
 
-const eventFiles = fs.readdirSync('./events').filter((file) => file.endsWith('.js'));
+const eventFiles = readdirSync('./events').filter((file) => file.endsWith('.js'));
 
 for (const file of eventFiles) {
 	const event = require(`./events/${file}`);
