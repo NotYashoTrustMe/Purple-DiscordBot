@@ -2,9 +2,9 @@
 
 # Purple - A Discord JS bot (Beta)
 
-[![Yasho022 - Purple-DiscordBot](https://img.shields.io/static/v1?label=Yasho022&message=Purple-DiscordBot&style=for-the-badge&color=%235e324&logo=github)](https://github.com/Yasho022/Purple-DiscordBot "Go to GitHub repo")
+[![Yasho022 - Purple-DiscordBot](https://img.shields.io/static/v1?label=Yasho022&message=Purple-DiscordBot-blue&style=for-the-badge&color=%235e324&logo=github)](https://github.com/Yasho022/Purple-DiscordBot "Go to GitHub repo")
 [![Invite - Purple#5344](https://img.shields.io/static/v1?label=Invite&message=Purple%235344&color=%234248f5&style=for-the-badge&logo=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2020%2F12%2FDiscord-Logo.png)](https://discord.com/api/oauth2/authorize?client_id=908201780494606356&permissions=397808498902&scope=bot%20applications.commands)
-[![Build Test - Passing](https://img.shields.io/badge/Run_Test-Passing-success&style=for-the-badge)](https://github.com/Yasho022/Purple-DiscordBot/actions)
+[![Build Test - Passing](https://img.shields.io/badge/Error_Test-No_Error-green?style=for-the-badge)](https://github.com/Yasho022/Purple-DiscordBot/actions)
 > An open-source discord bot with feaures such as memes, quotes, moderation and auto role assignment.
 
 ### Launguage: <br>
