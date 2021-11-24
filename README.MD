@@ -2,13 +2,15 @@
 
 # Purple - A Discord JS bot (Beta)
 
-[![Yasho022 - Purple-DiscordBot](https://img.shields.io/static/v1?label=Yasho022&message=Purple-DiscordBot&color=%235e324&logo=github)](https://github.com/Yasho022/Purple-DiscordBot "Go to GitHub repo")
-[![Invite - Purple#5344](https://img.shields.io/static/v1?label=Invite&message=Purple%235344&color=%234248f5&logo=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2020%2F12%2FDiscord-Logo.png)](https://discord.com/api/oauth2/authorize?client_id=908201780494606356&permissions=397808498902&scope=bot%20applications.commands)
-[![Build Test - Passed](https://img.shields.io/badge/Build_Test-Passed-success)](https://github.com/Yasho022/Purple-DiscordBot/actions)
+<p>
+<a href="https://discord.com/api/oauth2/authorize?client_id=908201780494606356&amp;permissions=397808498902&amp;scope=bot%20applications.commands"><img src="https://img.shields.io/static/v1?label=Invite&amp;message=Purple%235344&amp;color=%234248f5&amp;style=for-the-badge&amp;logo=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2020%2F12%2FDiscord-Logo.png" style = "width: 175px" alt="Invite - Purple#5344"></a>
+<a href="https://github.com/Yasho022/Purple-DiscordBot/actions"><img src="https://img.shields.io/badge/Error_Test-No_Error-green?style=for-the-badge" style = "width: 175px;" alt="Build Test - Passing"></a></p>
+
 > An open-source discord bot with feaures such as memes, quotes, moderation and auto role assignment.
 
 ### Launguage: <br>
-<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">
+<a href = "https://www.javascript.com/">
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"></a><a href = "https://nodejs.org/en/"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"></a>
 
 ## Features
 - Calculate Mathematical Equation
@@ -48,8 +50,8 @@ It is advised to host this bot on heroku for a free or a paid plan according to 
 
 <a href="https://heroku.com/deploy?template=https://github.com/Yasho022/Purple-DiscordBot"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku"></a>
 
-[Setting the environment variables in Heroku](https://devcenter.heroku.com/articles/config-vars).
+---
 
+<p style = "font-size: 85%;">By Yasho<br>
+ Readme inspired from <a href="https://github.com/zhycorp/disc-11/blob/main/README.md">Disc-11</a></p>
 
-> By Yasho<br>
- Readme inspired from [Disc-11](https://github.com/zhycorp/disc-11/blob/main/README.md)
