@@ -4,7 +4,7 @@
 
 [![Yasho022 - Purple-DiscordBot](https://img.shields.io/static/v1?label=Yasho022&message=Purple-DiscordBot&color=%235e324&logo=github)](https://github.com/Yasho022/Purple-DiscordBot "Go to GitHub repo")
 [![Invite - Purple#5344](https://img.shields.io/static/v1?label=Invite&message=Purple%235344&color=%234248f5&logo=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2020%2F12%2FDiscord-Logo.png)](https://discord.com/api/oauth2/authorize?client_id=908201780494606356&permissions=397808498902&scope=bot%20applications.commands)
-[![Build Test - Passing](https://img.shields.io/badge/Build_Test-Passed-success)](https://github.com/Yasho022/Purple-DiscordBot/actions)
+[![Build Test - Passing](https://img.shields.io/badge/Run_Test-Passing-success)](https://github.com/Yasho022/Purple-DiscordBot/actions)
 > An open-source discord bot with feaures such as memes, quotes, moderation and auto role assignment.
 
 ### Launguage: <br>
