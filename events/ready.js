@@ -35,6 +35,5 @@ module.exports = {
 		client.user.setActivity('Commands | /help', { type: 'Playing' });
 
 		let botCommandsChannel = client.channels.cache.get(process.env.BOT_COMMANDS_CHANNEL);
-		botCommandsChannel.send('Hey, Everyone!');
 	}
 };
