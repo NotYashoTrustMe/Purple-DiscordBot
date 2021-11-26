@@ -11,9 +11,19 @@
 
 ### Launguages and Tools: <br>
 <a href = "https://www.javascript.com/">
-<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"></a>
-<a href = "https://nodejs.org/en/"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"></a>
-<img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&amp;logo=visual-studio-code&amp;logoColor=white" alt="Visual Studio Code"> <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&amp;logo=windows&amp;logoColor=white" alt="Windows">
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
+</a>
+<a href = "https://nodejs.org/en/">
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">
+</a>
+<br>
+<a href = "https://code.visualstudio.com/">
+<img src="https://img.shields.io/badge/vscode-4275f5.svg?style=for-the-badge&amp;logo=visual-studio-code&amp;logoColor=white" alt="Visual Studio Code"> </a>
+<a href = "https://www.microsoft.com/en-in/windows/windows-11">
+<img src="https://img.shields.io/badge/Windows 
+11-0096d6?style=for-the-badge&amp;logo=windows&amp;logoColor=white" alt="Windows">
+</a>
+
 
 
 
