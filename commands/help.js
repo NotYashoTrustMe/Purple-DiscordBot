@@ -11,9 +11,9 @@ var Embed = new Discord.MessageEmbed()
 	.addFields(
 		{ name: 'help:', value: '• Get the list of commands' },
 		{
-			name  : 'calculate:',
+			name  : 'quote:',
 			value :
-				'• Calculate an equation.\n • `-` for Substraction. `(ex. - 10 - 2 => 8)`\n • `+` for Addition. `(ex. - 10 + 2 => 12)`\n • `*` for Multiplication. `(ex. - 10 * 2 => 20)`\n • `/` for Division. `(ex. - 10 / 2 => 5)`\n • `%` for Remainder. `(ex. - 10 % 2 => 0, 10 % 3 => 1)`'
+				'• Get a Motivational Quote'
 		},
 		{ name: 'meme:', value: '• Get a Random Meme From Reddit (subreddit: `subreddit name`)' },
 		{ name: '\u200B', value: '\u200B' }
