@@ -8,7 +8,7 @@
 <blockquote>
 <p>An open-source discord bot with feaures such as memes, quotes, moderation and auto role assignment.</p>
 </blockquote>
-<h3> Launguage:</h3> <br>
+<h3> Launguages and Tools:</h3>
 <a href = "https://www.javascript.com/">
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"></a><a href = "https://nodejs.org/en/"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"></a>
 
