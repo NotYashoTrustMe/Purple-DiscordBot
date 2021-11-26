@@ -56,10 +56,16 @@ It is advised to host this bot on heroku for a free or a paid plan according to 
 <a href="https://heroku.com/deploy?template=https://github.com/Yasho022/Purple-DiscordBot"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku"></a>
 
 ---
-<p style = "font-size: 85%;">Contact Me :)
-</p>
+### Tests
+<img src="https://github.com/Yasho022/Purple-DiscordBot/actions/workflows/node.js.yml/badge.svg" alt="example workflow">
 
+___
+
+### Contact Me 💌
+          
 <a href = "https://discord.com/channels/@me">
 <img src="https://img.shields.io/badge/Yasho_%234476-5340ff?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="">
 </a>
-
+<a href = "https://discord.com/channels/@me">
+<img src="https://img.shields.io/badge/wiredhack022@gmail.com-e9ff40?style=for-the-badge&amp;logo=gmail&amp;logoColor=black" alt="">
+</a>
