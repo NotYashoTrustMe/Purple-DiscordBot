@@ -9,7 +9,7 @@
 
 
 
-### Launguages and Tools: <br>
+### Launguages and Tools 🔖 <br>
 <a href = "https://www.javascript.com/">
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
 </a>
@@ -28,13 +28,13 @@
 
 
 
-## Features
+## Features ✨
 - Calculate Mathematical Equation
 - Get a random quote
 - Get a meme from any subreddit
 - And Many more...
 
-## Installation and Setup
+## Installation and Setup 🔃 
 1. Install [Node.js](https://nodejs.org/en/) version`v16.13.0` or above.
 
 1. Create a new app from [Discord Developer Portal](https://discord.com/developers/applications)
@@ -56,10 +56,10 @@
 
 If everything goes well, you should see `Purple is Online 🟢` in the console. 
 
-## Run and Host
-### PC
+## Run and Host ▶️ 
+###  PC 💻
 You can run your bot on you pc with the command `npm start`. However the bot will be online while you are running the application.
-### Heroku (Recommended)
+### Heroku (Recommended) 🖲️
 **_This is not a Paid Promotion_**<br>
 It is advised to host this bot on heroku for a free or a paid plan according to your needs as the bot will be online even if your PC is not running.
 
@@ -67,7 +67,7 @@ It is advised to host this bot on heroku for a free or a paid plan according to 
 <a href="https://heroku.com/deploy?template=https://github.com/Yasho022/Purple-DiscordBot"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku"></a>
 
 ---
-### Tests
+### Tests 🧪 
 <img src="https://github.com/Yasho022/Purple-DiscordBot/actions/workflows/node.js.yml/badge.svg" alt="example workflow">
 
 ___
