@@ -20,8 +20,7 @@
 <a href = "https://code.visualstudio.com/">
 <img src="https://img.shields.io/badge/vscode-4275f5.svg?style=for-the-badge&amp;logo=visual-studio-code&amp;logoColor=white" alt="Visual Studio Code"> </a>
 <a href = "https://www.microsoft.com/en-in/windows/windows-11">
-<img src="https://img.shields.io/badge/Windows 
-11-0096d6?style=for-the-badge&amp;logo=windows&amp;logoColor=white" alt="Windows">
+<img src="https://img.shields.io/badge/Windows_11-0096d6?style=for-the-badge&amp;logo=windows&amp;logoColor=white" alt="Windows">
 </a>
 
 
