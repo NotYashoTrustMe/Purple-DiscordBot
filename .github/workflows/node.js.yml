@@ -13,8 +13,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-<<<<<<< HEAD
-=======
     env:
       TOKEN: ${{ secrets.TOKEN }}
       GUILD_ID:  ${{ secrets.GUILD_ID}}
@@ -22,7 +20,6 @@ jobs:
       GENERAL_CHANNEL: ${{ secrets.GENERAL_CHANNEL }}
       BOT_COMMANDS_CHANNEL: ${{ secrets.BOT_COMMANDS_CHANNEL }}
       MEMBER_LOG_CHANNEL: ${{ secrets.MEMBER_LOG_CHANNEL }}
->>>>>>> 4cf773eb7630fd85ecf2728a9a4a3c753c4c9ea1
     strategy:
       matrix:
         node-version: [v16.13.0]
@@ -37,4 +34,3 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm start

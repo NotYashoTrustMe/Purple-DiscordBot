@@ -2,15 +2,20 @@
 
 # Purple - A Discord JS bot (Beta)
 
-<p>
 <a href="https://discord.com/api/oauth2/authorize?client_id=908201780494606356&amp;permissions=397808498902&amp;scope=bot%20applications.commands"><img src="https://img.shields.io/static/v1?label=Invite&amp;message=Purple%235344&amp;color=%234248f5&amp;style=for-the-badge&amp;logo=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2020%2F12%2FDiscord-Logo.png" alt="Invite - Purple#5344"></a>
-<a href="https://github.com/Yasho022/Purple-DiscordBot/actions"><img src="https://img.shields.io/badge/Error_Test-No_Errors-green?style=for-the-badge" alt="Build Test - Passing"></a></p>
+<a href="https://github.com/Yasho022/Purple-DiscordBot/actions"><img src="https://img.shields.io/badge/Build Test-Passing-%2319bd5a?style=for-the-badge" alt="Errors- No Errors"></a>
 
 > An open-source discord bot with feaures such as memes, quotes, moderation and auto role assignment.
 
-### Launguage: <br>
+
+
+### Launguages and Tools: <br>
 <a href = "https://www.javascript.com/">
-<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"></a><a href = "https://nodejs.org/en/"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"></a>
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"></a>
+<a href = "https://nodejs.org/en/"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"></a>
+<img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&amp;logo=visual-studio-code&amp;logoColor=white" alt="Visual Studio Code"> <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&amp;logo=windows&amp;logoColor=white" alt="Windows">
+
+
 
 ## Features
 - Calculate Mathematical Equation
@@ -51,7 +56,10 @@ It is advised to host this bot on heroku for a free or a paid plan according to 
 <a href="https://heroku.com/deploy?template=https://github.com/Yasho022/Purple-DiscordBot"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku"></a>
 
 ---
+<p style = "font-size: 85%;">Contact Me :)
+</p>
 
-<p style = "font-size: 85%;">By Yasho<br>
- Readme inspired from <a href="https://github.com/zhycorp/disc-11/blob/main/README.md">Disc-11</a></p>
+<a href = "https://discord.com/channels/@me">
+<img src="https://img.shields.io/badge/Yasho_%234476-5340ff?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="">
+</a>
 
