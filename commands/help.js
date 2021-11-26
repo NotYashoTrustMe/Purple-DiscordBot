@@ -15,7 +15,7 @@ var Embed = new Discord.MessageEmbed()
 			value :
 				'• Get a Motivational Quote'
 		},
-		{ name: 'meme:', value: '• Get a Random Meme From Reddit (subreddit: `subreddit name`)' },
+		{ name: 'meme:', value: '• Get a Random Meme From Reddit [Optional: `subreddit:` subreddit name]' },
 		{ name: '\u200B', value: '\u200B' }
 	)
 	.setTimestamp()
