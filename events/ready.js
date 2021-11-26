@@ -37,7 +37,5 @@ module.exports = {
 		console.log(`\u001B[36mPurple is Online 🟢\u001B[0m`);
 
 		client.user.setActivity('Commands | /help', { type: 'Playing' });
-
-		let botCommandsChannel = client.channels.cache.get(process.env.BOT_COMMANDS_CHANNEL);
 	}
 };

@@ -13,13 +13,16 @@ module.exports = {
 				.setRequired(false)
 		),
 	async execute(interaction) {
-		const embed = new Discord.MessageEmbed();
-		let subreddit_input = interaction.options.getString('subreddit');
-		let subreddit = 'r/memes';
-		if (subreddit_input) {
-			if (subreddit_input.indexOf('r/') !== -1) subreddit_input.replace('r/', '').trim();
-			else subreddit_input = 'r/' + subreddit_input;
-			subreddit = subreddit_input.replace(/\s/g, '');
+		const Embed = new Discord.MessageEmbed();
+		let subreddit = interaction.options.getString('subreddit');
+		if (subreddit) {
+			if (subreddit.indexOf('r/') !== -1) subreddit.replace('r/', '').trim();
+			else subreddit = 'r/' + subreddit;
+			subreddit = subreddit.replace(/\s/g, '');
+		}
+		else {
+			const memeSub = ['r/memes', 'r/dankmemes', 'r/terriblefacebookmemes', 'r/funny', 'r/wholesomememes', 'r/raimimemes', 'r/memeeconomy']
+			subreddit = choice(memeSub);
 		}
 		await interaction.deferReply();
 		got(`https://www.reddit.com/${subreddit}/random/.json`)
@@ -32,19 +35,19 @@ module.exports = {
 				] = list.data.children;
 
 				const permalink = post.data.permalink;
-				const memeUrl = `https://reddit.com${permalink}`;
-				const memeImage = post.data.url;
+				const memeLink = `https://reddit.com${permalink}`;
+				const memeContent = post.data.url;
 				const memeTitle = post.data.title;
 
-				embed.setTitle(`${memeTitle}`);
-				embed.setURL(`${memeUrl}`);
-				embed.setColor('#6e6f85');
-				embed.setImage(memeImage);
-				embed.setFooter(`Source: ${subreddit}`);
+				Embed.setTitle(`${memeTitle}`);
+				Embed.setURL(`${memeLink}`);
+				Embed.setColor('#6e6f85');
+				Embed.setImage(memeContent);
+				Embed.setFooter(`Source: ${subreddit}`);
 
 				interaction.editReply({
 					embeds : [
-						embed
+						Embed
 					]
 				});
 			})
@@ -54,3 +57,8 @@ module.exports = {
 		//
 	}
 };
+
+function choice(choices) {
+	var index = Math.floor(Math.random() * choices.length);
+	return choices[index];
+}
