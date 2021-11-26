@@ -28,7 +28,6 @@
 
 
 ## Features ✨
-- Calculate Mathematical Equation
 - Get a random quote
 - Get a meme from any subreddit
 - And Many more...
