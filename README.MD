@@ -43,6 +43,7 @@
     - `GENERAL_CHANNEL`= The general channel of your server (To direct the new members to that channel)
     - `BOT_COMMANDS_CHANNEL`= The bot commands channel ID
     - `MEMBER_LOG_CHANNEL`= The member log channel ID (Keep the channel so only Bots allowed to message)
+    - `MUSIC_CHANNEL` = The ID of the music voice channel of your server.
 1. Install the required dependencies with:
     ```
     npm install
