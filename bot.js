@@ -11,7 +11,6 @@ const client = new Client({
 		Intents.FLAGS.GUILD_MEMBERS
 	]
 });
-
 const commandFiles = readdirSync('./commands').filter((file) => file.endsWith('.js'));
 
 var commands = [];

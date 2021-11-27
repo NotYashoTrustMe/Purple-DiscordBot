@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const fs = require('fs');
 const path = require('path');
+const { MessageEmbed } = require('discord.js');
 const queue = require(path.resolve('json/queue.json'));
 
 module.exports = {
@@ -12,19 +13,24 @@ module.exports = {
 		),
 	async execute(interaction) {
 		await interaction.deferReply();
-        song = toTitleCase(interaction.options.getString('song'));
-        queue.push(song)
+		song = toTitleCase(interaction.options.getString('song'));
+		queue.push(song);
 		data = JSON.stringify(queue);
 		fs.writeFileSync(path.resolve('json/queue.json'), data);
-		interaction.editReply(`${song} added to queue!`);
+		const Embed = new MessageEmbed()
+			.setTitle('You\'re all set!')
+			.setColor('#00D26A') 
+			.setDescription(`✅  ${song} added to queue!`);
+		return await interaction.editReply({
+			embeds : [
+				Embed
+			]
+		});
 	}
 };
 
 function toTitleCase(str) {
-  return str.replace(
-    /\w\S*/g,
-    function(txt) {
-      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    }
-  );
+	return str.replace(/\w\S*/g, function(txt) {
+		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+	});
 }
