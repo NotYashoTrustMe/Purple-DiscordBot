@@ -1,13 +1,17 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');	
+const { SlashCommandBuilder } = require('@discordjs/builders');
+const { MessageEmbed } = require('discord.js');
+const ytdl = require('ytdl-core');
+const path = require('path');
+const queue = require(path.resolve('json/queue.json'));
+
 require('dotenv').config();
 
 module.exports = {
-	data: new SlashCommandBuilder()
+	data    : new SlashCommandBuilder()
 		.setName('play')
 		.setDescription('Play a song from youtube')
-        .addStringOption((option) => option
-                .setName('search').setDescription('Enter a song name/url(youtube) to play')
-			.setRequired(false)
+		.addStringOption((option) =>
+			option.setName('search').setDescription('Enter a song name/url(youtube) to play').setRequired(false)
 		),
 	async execute(interaction) {
 		await interaction.deferReply();
@@ -16,16 +20,18 @@ module.exports = {
 			// Play the songs in the queue
 		}
 
-		const voiceChannel = interaction.member.voice.channel;
-		if (!voiceChannel) {
+		if (!interaction.member.voice.channel) {
 			const musicChannel = process.env.MUSIC_CHANNEL;
-            const embed = new Embed()
-                .setColor(0xFF0000)
-                .setDescription(`You need to be in a voice channel, join the <#${musicChannel}>`)
-            return await interaction.reply({embeds: [embed]});
-        }
-
-		console.log(interaction.member.voice)
+			const Embed = new MessageEmbed()
+				.setTitle('Whoops!')
+				.setColor('#eb3d71')
+				.setDescription(`💀 You need to be in a music channel, join the <#${musicChannel}> channel`);
+			return await interaction.editReply({
+				embeds : [
+					Embed
+				]
+			});
+		}
 		interaction.editReply(`Playing ${interaction.options.getString('search')}`);
 	}
 };
