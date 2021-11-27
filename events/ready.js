@@ -14,16 +14,18 @@ module.exports = {
 		(async () => {
 			try {
 				if (process.env.STAGE == 'production') {
-					//! If you are running for the first time, the line should be this:
+					//! If you are running for the first time or adding your own command, change it to this to this to register the command:
 					/*await rest.put(Routes.applicationCommands(client.user.id), { body: commands });*/
 					await rest.put(Routes.applicationCommands(client.user.id), { body: [] });
 					console.log('\u001B[36mRegistered Commands \u001B[32mGlobally ✔️\u001B[0m');
 				}
 				else {
-					//! If you are running for the first time, the line should be this:
-					/*await rest.put(Routes.applicationCommands(client.user.id), { body: commands });*/
+					//! If you are running for the first time or adding your own command, change it to this to this to register the command:
+					/*await rest.put(Routes.applicationGuildCommands(client.user.id, process.env.GUILD_ID), {
+						body : commands
+					});*/
 					await rest.put(Routes.applicationGuildCommands(client.user.id, process.env.GUILD_ID), {
-						body : []
+						body : commands
 					});
 					console.log('\u001B[36mRegistered Commands\u001B[33m Locally ✔️\u001B[0m');
 				}
