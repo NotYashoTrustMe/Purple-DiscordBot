@@ -30,6 +30,7 @@
 ## Features ✨
 - Get a random quote
 - Get a meme from any subreddit
+- Music Bot (Please Contribute to Music Command)
 - And Many more...
 
 ## Installation and Setup 🔃 
