@@ -68,7 +68,9 @@ It is advised to host this bot on heroku for a free or a paid plan according to 
 
 ---
 ### Tests 🧪 
+<a href = "https://github.com/Yasho022/Purple-DiscordBot/actions">
 <img src="https://github.com/Yasho022/Purple-DiscordBot/actions/workflows/node.js.yml/badge.svg" alt="example workflow">
+</a>
 
 ___
 
