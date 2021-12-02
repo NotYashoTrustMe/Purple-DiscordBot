@@ -34,7 +34,6 @@ module.exports = {
 			play(connection, interaction);
 		});
 
-
 		function play(connection, interaction) {
 			if (song) {
 				isUrl = song.indexOf('https://www.youtube.com/watch') == 0 ? true : false;
@@ -56,7 +55,11 @@ module.exports = {
 						.setColor('#6cc400')
 						.setDescription(queue[i])
 						.setFooter(`Added by ${interaction.user.username}`, interaction.user.displayAvatarURL());
-					interaction.editReply({embeds : [Embed]});
+					interaction.editReply({
+						embeds: [
+							Embed
+						]
+					});
 				}
 			}
 
