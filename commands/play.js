@@ -56,7 +56,7 @@ module.exports = {
 						.setColor('#6cc400')
 						.setDescription(queue[i])
 						.setFooter(`Added by ${interaction.user.username}`, interaction.user.displayAvatarURL());
-					await interaction.editReply({embeds : [Embed]});
+					interaction.editReply({embeds : [Embed]});
 				}
 			}
 
