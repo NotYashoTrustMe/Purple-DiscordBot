@@ -11,7 +11,7 @@ module.exports = {
 			await command.execute(interaction);
 		} catch (err) {
 			console.log('\u001B[31m' + err + '\u001B[0m');
-			await interaction.reply({ content: 'Your command could not be processed B(', ephemeral: true });
+			await interaction.reply({ content: 'Your command could not be processed :(', ephemeral: true });
 		}
 	}
 };

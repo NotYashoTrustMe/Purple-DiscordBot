@@ -14,9 +14,8 @@ module.exports = {
 	async execute(interaction) {
 		await interaction.deferReply();
 
-		// check for admin permissions
 		if (!interaction.member.permissions.has('ADMINISTRATOR')) {
-			await interaction.editReply({ content: 'You are not authorized to use this command', ephemeral: true });
+			interaction.editReply({ content: 'You are not authorized to use this command', ephemeral: true });
 			return;
 		}
 
@@ -43,8 +42,8 @@ module.exports = {
 				if (err) {
 					console.error(err);
 					interaction.editReply({
-						content: 'An error occurred while trying to set the welcome channel.',
-						ephemeral: true
+						content   : 'An error occurred while trying to set the welcome channel.',
+						ephemeral : true
 					});
 					return;
 				}
