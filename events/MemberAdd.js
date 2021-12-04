@@ -1,22 +1,28 @@
 const Discord = require('discord.js');
-require('dotenv').config();
+const GuildSettings = require('../models/GuildSettings.js');
 
 module.exports = {
-	name    : 'MemberAdd',
+	name    : 'guildMemberAdd',
 
 	async execute(member) {
-		const generalChannel = process.env.GENERAL_CHANNEL;
-		const memeberChannel = process.env.MEMBER_LOG_CHANNEL;
+		console.log(`${member.user.username} has joined ${member.guild.name}`);
+		const guildSettings = await GuildSettings.findOne({ guildID: member.guild.id });
+
+		if (!guildSettings && !guildSettings.welcomeChannel) return;
+
+
+		const welcomeChannel = member.guild.channels.cache.get(guildSettings.welcomeChannel);
+		const generalChannel = guildSettings.generalChannel;
 		const memberEmbed = new Discord.MessageEmbed()
 			.setColor('#03cafc')
-			.setTitle('New Homie! 🎉')
+			.setTitle('New Member! 🎉')
 			.setDescription(
-				`${member.user} is now a member of Stonks! Have a great time here, go to <#${generalChannel}> for chats, Thanks for Joining! Enjoy :)`
+				`${member.user} is now a member of Stonks! Have a great time here, visit our <#${generalChannel}> for chats and more!`
 			)
 			.setThumbnail(member.user.displayAvatarURL())
 			.setTimestamp();
 
-		member.guild.channels.cache.get(memeberChannel).send({
+		welcomeChannel.send({
 			embeds : [
 				memberEmbed
 			]

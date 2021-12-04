@@ -1,4 +1,3 @@
-require('dotenv').config();
 module.exports = {
 	name    : 'interactionCreate',
 
@@ -12,6 +11,6 @@ module.exports = {
 		} catch (err) {
 			console.log('\u001B[31m' + err + '\u001B[0m');
 			await interaction.reply({ content: 'Your command could not be processed :(', ephemeral: true });
-		}
+		}	
 	}
 };
