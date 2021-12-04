@@ -3,12 +3,12 @@ const GuildSettings = require('../models/GuildSettings');
 
 module.exports = {
 	data    : new SlashCommandBuilder()
-		.setName('set-welcome-channel')
-		.setDescription('Set the channel where the welcome message will be sent.')
+		.setName('set-bot-channel')
+		.setDescription('Set the channel where bot commands will be sent.')
 		.addChannelOption((option) =>
 			option
 				.setName('channel')
-				.setDescription('The channel where the welcome message will be sent.')
+				.setDescription('The channel to set as the bot commands channel')
 				.setRequired(true)
 		),
 	async execute(interaction) {
@@ -19,11 +19,11 @@ module.exports = {
 			return;
 		}
 
-		GuildSettings.findOne({ guild_id: interaction.guild.id }, (err, settings) => {
+		GuildSettings.findOne({ guildID: interaction.guild.id }, (err, settings) => {
 			if (err) {
 				console.error(err);
 				interaction.editReply({
-					content   : 'An error occurred while trying to set the welcome channel.',
+					content   : 'An error occurred while trying to set the bot commands channel.',
 					ephemeral : true
 				});
 				return;
@@ -31,29 +31,29 @@ module.exports = {
 
 			if (!settings) {
 				settings = new GuildSettings({
-					guildId           : interaction.guild.id,
-					welcomeChannel : interaction.options.getChannel('channel').id
+					guildID           : interaction.guild.id,
+					botCommandsChannel : interaction.options.getChannel('channel').id
 				});
 			}
 			else {
-				settings.welcomeChannel = interaction.options.getChannel('channel').id;
+				settings.botCommandsChannel = interaction.options.getChannel('channel').id;
 			}
 			settings.save((err) => {
 				if (err) {
 					console.error(err);
 					interaction.editReply({
-						content   : 'An error occurred while trying to set the welcome channel.',
+						content   : 'An error occurred while trying to set the bot commands channel.',
 						ephemeral : true
 					});
 					return;
 				}
 				else {
-					const welcomeChannel = interaction.options.getChannel('channel').id;
+					const botCommandsChannel = interaction.options.getChannel('channel').id;
 					const okayEmoji = interaction.guild.emojis.cache.find((emoji) => emoji.name === 'nice');
 					interaction.editReply(
 						okayEmoji
-							? `Welcome channel set to <#${welcomeChannel}> ${okayEmoji}`
-							: `Welcome channel set to <#${welcomeChannel}>`
+							? `Bot Commands channel set to <#${botCommandsChannel}> ${okayEmoji}`
+							: `Bot Commands channel set to <#${botCommandsChannel}>`
 					);
 				}
 			});
