@@ -4,7 +4,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('dad-joke')
+        .setName('dadjoke')
         .setDescription(`Get a dad joke`),
     async execute(interaction) {
         await interaction.deferReply();
@@ -14,12 +14,26 @@ module.exports = {
                 Accept: 'application/json'
             }
         });
-        const json = await response.json();
 
         const embed = new MessageEmbed()
+
+        const json = await response.json();
+        if (json.joke.includes('?')) {
+            const setup = json.joke.split('?')[0] + "?";
+            const delivery = json.joke.split('? ')[1];
+            embed
             .setColor('#ffe600')
-            .setTitle(json.joke)
-            .setFooter('Powered by icanhazdadjoke.com')
+            .setTitle(delivery ? `${setup} || ${delivery} ||` : setup)
+            .setFooter(`Powered by ${url}`);
+        }
+        else {
+            var fannyEmoji = interaction.guild.emojis.cache.find((emoji) => emoji.name === 'fanny')
+            fannyEmoji = fannyEmoji ? fannyEmoji.toString() : '';
+            embed
+            .setColor('#ffe600')
+            .setTitle(json.joke+" "+fannyEmoji)
+            .setFooter(`Powered by ${url}`);
+        }
 
         await interaction.editReply({embeds: [embed]});
     }
