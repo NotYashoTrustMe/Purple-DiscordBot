@@ -10,15 +10,14 @@ module.exports = {
 		const banned = [];
 
 		for (i of bannedList.words) {
-			banned.push(i)
+			banned.push(i);
 		}
 		for (i of bannedList.links) {
-			banned.push(i)
+			banned.push(i);
 		}
 		for (i of bannedList.otherLangs) {
-			banned.push(i)	
+			banned.push(i);
 		}
-		
 
 		for (i of banned) {
 			if (originalMessage.toLowerCase().includes(i)) {
@@ -26,7 +25,7 @@ module.exports = {
 				const warningMessage = i.match(/\b(https?:\/\/\S+)/gi)
 					? `**⚠️ ${message.author} has been warned for using a banned GIF**\n\nOriginal Message: ${originalMessage}\n`
 					: `**⚠️ ${message.author} has been warned for using a banned word**\n\nOriginal Message: \`\`\`${originalMessage}\`\`\`\n`;
-				
+
 				const warning = message.channel.send(warningMessage);
 
 				setTimeout(() => {

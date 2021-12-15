@@ -13,7 +13,7 @@ module.exports = {
 			.setTitle('⠀⠀⠀\n' + quote['text'])
 			.setDescription('~ ' + quote['author'] + '\n⠀⠀⠀');
 		interaction.editReply({
-			embeds: [
+			embeds : [
 				Embed
 			]
 		});

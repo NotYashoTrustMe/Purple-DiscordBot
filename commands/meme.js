@@ -21,7 +21,15 @@ module.exports = {
 			subreddit = subreddit.replace(/\s/g, '');
 		}
 		else {
-			const memeSub = ['r/memes', 'r/dankmemes', 'r/terriblefacebookmemes', 'r/funny', 'r/wholesomememes', 'r/raimimemes', 'r/memeeconomy']
+			const memeSub = [
+				'r/memes',
+				'r/dankmemes',
+				'r/terriblefacebookmemes',
+				'r/funny',
+				'r/wholesomememes',
+				'r/raimimemes',
+				'r/memeeconomy'
+			];
 			subreddit = choice(memeSub);
 		}
 		await interaction.deferReply();

@@ -5,7 +5,7 @@ class Database {
 	constructor() {
 		this.connection = null;
 	}
-
+	
 	connect() {
 		console.log('\u001B[33m' + 'Connecting to the database...' + '\u001B[0m');
 		mongoose

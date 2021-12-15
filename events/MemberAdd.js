@@ -10,7 +10,6 @@ module.exports = {
 
 		if (!guildSettings && !guildSettings.welcomeChannel) return;
 
-
 		const welcomeChannel = member.guild.channels.cache.get(guildSettings.welcomeChannel);
 		const generalChannel = guildSettings.generalChannel;
 		const memberEmbed = new Discord.MessageEmbed()

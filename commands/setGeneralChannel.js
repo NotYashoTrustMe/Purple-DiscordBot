@@ -6,10 +6,7 @@ module.exports = {
 		.setName('set-general-channel')
 		.setDescription('Set the main channel where new members will be redirected to ')
 		.addChannelOption((option) =>
-			option
-				.setName('channel')
-				.setDescription('The channel to set as the general channel')
-				.setRequired(true)
+			option.setName('channel').setDescription('The channel to set as the general channel').setRequired(true)
 		),
 	async execute(interaction) {
 		await interaction.deferReply();
@@ -31,7 +28,7 @@ module.exports = {
 
 			if (!settings) {
 				settings = new GuildSettings({
-					guildID           : interaction.guild.id,
+					guildID        : interaction.guild.id,
 					generalChannel : interaction.options.getChannel('channel').id
 				});
 			}

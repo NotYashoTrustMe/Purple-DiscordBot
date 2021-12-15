@@ -31,7 +31,7 @@ module.exports = {
 
 			if (!settings) {
 				settings = new GuildSettings({
-					guildId           : interaction.guild.id,
+					guildId        : interaction.guild.id,
 					welcomeChannel : interaction.options.getChannel('channel').id
 				});
 			}

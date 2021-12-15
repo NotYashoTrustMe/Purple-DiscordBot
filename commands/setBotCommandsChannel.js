@@ -6,10 +6,7 @@ module.exports = {
 		.setName('set-bot-channel')
 		.setDescription('Set the channel where bot commands will be sent.')
 		.addChannelOption((option) =>
-			option
-				.setName('channel')
-				.setDescription('The channel to set as the bot commands channel')
-				.setRequired(true)
+			option.setName('channel').setDescription('The channel to set as the bot commands channel').setRequired(true)
 		),
 	async execute(interaction) {
 		await interaction.deferReply();
@@ -31,7 +28,7 @@ module.exports = {
 
 			if (!settings) {
 				settings = new GuildSettings({
-					guildID           : interaction.guild.id,
+					guildID            : interaction.guild.id,
 					botCommandsChannel : interaction.options.getChannel('channel').id
 				});
 			}

@@ -12,10 +12,14 @@ var Embed = new Discord.MessageEmbed()
 		{ name: 'help:', value: '• Get the list of commands' },
 		{
 			name  : 'quote:',
-			value :
-				'• Get a Motivational Quote'
+			value : '• Get a Motivational Quote'
 		},
 		{ name: 'meme:', value: '• Get a Random Meme From Reddit [Optional: `subreddit:` subreddit name]' },
+		{ name: 'dadjoke:', value: '• Get a dad joke' },
+		{ name: 'quote:', value: '• Get a Motivational Quote' },
+		{ name: setBotCommandsChannel, value: '• Set the channel for bot commands' },
+		{ name: setGeneralChannel, value: '• Set the channel for general messages' },
+		{ name: setWelcomeChannel, value: '• Set the channel for welcome messages' },
 		{ name: '\u200B', value: '\u200B' }
 	)
 	.setTimestamp()
@@ -26,7 +30,7 @@ module.exports = {
 	async execute(interaction) {
 		await interaction.deferReply();
 		interaction.editReply({
-			embeds: [
+			embeds : [
 				Embed
 			]
 		});

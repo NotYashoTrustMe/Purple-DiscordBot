@@ -35,6 +35,6 @@ module.exports = {
 		})();
 
 		console.log(`\u001B[36mPurple is Online 🟢\u001B[0m`);
-		client.user.setActivity(`Commands ✨ | /help`);
+		client.user.setActivity(`Commands ▲ /help`);
 	}
 };
