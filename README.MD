@@ -5,7 +5,7 @@
 <a href="https://discord.com/api/oauth2/authorize?client_id=908201780494606356&amp;permissions=397808498902&amp;scope=bot%20applications.commands"><img src="https://img.shields.io/static/v1?label=Invite&amp;message=Purple%235344&amp;color=%234248f5&amp;style=for-the-badge&amp;logo=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2020%2F12%2FDiscord-Logo.png" alt="Invite - Purple#5344" target="_blank"></a>
 <a href="https://github.com/Yasho022/Purple-DiscordBot/actions" target="_blank"><img src="https://img.shields.io/badge/Build Test-Passing-%2319bd5a?style=for-the-badge" alt="Errors- No Errors"></a>
 
-> An open-source discord bot for fun and moderation.
+An open-source discord bot for fun and moderation.
 
 
 
@@ -76,7 +76,7 @@ ___
 
 ### Contact Me 💌
           
-<a href = "https://discord.com/channels/@me" target="_blank">
+<a href = "https://discord.com/users/756407252587642911" target="_blank">
 <img src="https://img.shields.io/badge/Yasho_%234476-5340ff?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="">
 </a>
 <a href = "https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank">
