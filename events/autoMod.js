@@ -12,7 +12,7 @@ module.exports = {
 				const warning = message.channel.send(
 					`**⚠️ ${message.author} has been warned for using a banned word**\n\nOriginal Message: \n\`\`\`${originalMessage}\`\`\`\n`
 				);
-		
+
 				setTimeout(() => {
 					warning.then((msg) => msg.delete());
 				}, 5000);
