@@ -8,10 +8,12 @@ module.exports = {
 		for (i of bannedWords) {
 			if (originalMessage.toLowerCase().includes(i)) {
 				message.delete();
-				const warning = message.channel.send(`**⚠️ ${message.author} has been warned for using a banned word**\n\nOriginal Message: \n\`\`\`${originalMessage}\`\`\`\n`);
+				const warning = message.channel.send(
+					`**⚠️ ${message.author} has been warned for using a banned word**\n\nOriginal Message: \n\`\`\`${originalMessage}\`\`\`\n`
+				);
 				setTimeout(() => {
-					warning.then (msg => msg.delete());
-				}, 3000);
+					warning.then((msg) => msg.delete());
+				}, 5000);
 			}
 		}
 	}
