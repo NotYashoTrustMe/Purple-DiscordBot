@@ -1,5 +1,5 @@
 const path = require('path');
-const bannedWords = require(path.resolve('config/bannedWords.json'));
+const bannedList = require(path.resolve('config/bannedList.json'));
 module.exports = {
 	name    : 'messageCreate',
 
@@ -7,7 +7,20 @@ module.exports = {
 		if (message.author.bot) return;
 		originalMessage = message.content;
 
-		for (i of bannedWords) {
+		const banned = [];
+
+		for (i of bannedList.words) {
+			banned.push(i)
+		}
+		for (i of bannedList.links) {
+			banned.push(i)
+		}
+		for (i of bannedList.otherLangs) {
+			banned.push(i)	
+		}
+		
+
+		for (i of banned) {
 			if (originalMessage.toLowerCase().includes(i)) {
 				message.delete();
 				const warningMessage = i.match(/\b(https?:\/\/\S+)/gi)
