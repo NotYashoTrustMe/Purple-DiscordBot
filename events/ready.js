@@ -17,7 +17,7 @@ module.exports = {
 			const guildID = guildSettings.guildID;
 			try {
 				if (process.env.STAGE == 'production') {
-					await rest.put(Routes.applicationCommands(client.user.id, guildID), { body: [] });
+					await rest.put(Routes.applicationCommands(client.user.id, guildID), { body: commands });
 					console.log(`\u001B[36m` + `[✓] Registered Commands ` + `\u001B[32m` + `Globally` + `\u001B[0m`);
 				}
 				else {
@@ -25,10 +25,10 @@ module.exports = {
 					* await rest.put(Routes.applicationGuildCommands(client.user.id, guildID), {body: commands});
 				   */
 					await rest.put(Routes.applicationGuildCommands(client.user.id, guildID), {
-						body : []
+						body : commands
 					});
 					console.log(`\u001B[36m` + `[✓] Registered Commands` + `\u001B[33m ` + `Locally` + `\u001B[0m`);
-				}
+				}	
 			} catch (err) {
 				if (err) {
 					console.log(`\u001B[31m` + `[x] ${err}` + `\u001B[0m`);
