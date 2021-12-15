@@ -17,7 +17,7 @@ module.exports = {
 			const guildID = guildSettings.guildID;
 			try {
 				if (process.env.STAGE == 'production') {
-					await rest.put(Routes.applicationCommands(client.user.id, guildID), { body: commands });
+					await rest.put(Routes.applicationCommands(client.user.id, guildID), { body: [] });
 					console.log(`\u001B[36m` + `[✓] Registered Commands ` + `\u001B[32m` + `Globally` + `\u001B[0m`);
 				}
 				else {

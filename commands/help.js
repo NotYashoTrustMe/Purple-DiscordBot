@@ -17,9 +17,9 @@ var Embed = new Discord.MessageEmbed()
 		{ name: 'meme:', value: '• Get a Random Meme From Reddit [Optional: `subreddit:` subreddit name]' },
 		{ name: 'dadjoke:', value: '• Get a dad joke' },
 		{ name: 'quote:', value: '• Get a Motivational Quote' },
-		{ name: "setBotCommandsChannel", value: '• Set the channel for bot commands' },
-		{ name: "setGeneralChannel", value: '• Set the channel for general messages' },
-		{ name: "setWelcomeChannel", value: '• Set the channel for welcome messages' },
+		{ name: "set-bot-channel", value: '• Set the channel for bot commands' },
+		{ name: "set-general-channel", value: '• Set the channel for general messages' },
+		{ name: "set-welcome-channel", value: '• Set the channel for welcome messages' },
 		{ name: '\u200B', value: '\u200B' }
 	)
 	.setTimestamp()
