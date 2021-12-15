@@ -5,16 +5,12 @@ var Embed = new Discord.MessageEmbed()
 	.setColor('#04D277')
 	.setTitle('Help Commands:')
 	.setDescription(
-		'Your command should start with `/`. Use \\ to ignore any escape sequences.\n\u200B'
+		'All the commands are slash commands, use `/`\n\u200B'
 	)
 	.setThumbnail('https://i.imgur.com/rNul59J.png')
 	.addFields(
 		{ name: 'help:', value: '• Get the list of commands' },
-		{
-			name  : 'quote:',
-			value : '• Get a Motivational Quote'
-		},
-		{ name: 'meme:', value: '• Get a Random Meme From Reddit [Optional: `subreddit:` subreddit name]' },
+		{ name: 'meme:', value: '• Get a Random Meme From Reddit \n[Optional: `subreddit:` name]' },
 		{ name: 'dadjoke:', value: '• Get a dad joke' },
 		{ name: 'quote:', value: '• Get a Motivational Quote' },
 		{ name: "set-bot-channel", value: '• Set the channel for bot commands' },
