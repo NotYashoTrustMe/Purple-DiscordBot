@@ -15,20 +15,21 @@ module.exports = {
 		(async () => {
 			const guildSettings = await GuildSettings.findOne({});
 			const guildID = guildSettings.guildID;
+
 			try {
 				if (process.env.STAGE == 'production') {
-					await rest.put(Routes.applicationCommands(client.user.id, guildID), { body: commands });
+					await rest.put(Routes.applicationCommands(client.user.id, guildID), { body: [] });
 					console.log(`\u001B[36m` + `[✓] Registered Commands ` + `\u001B[32m` + `Globally` + `\u001B[0m`);
 				}
 				else {
-					/* If you are running for the first time or adding your own command, change it to this to this to register the command:
+					/* 
 					* await rest.put(Routes.applicationGuildCommands(client.user.id, guildID), {body: commands});
 				   */
 					await rest.put(Routes.applicationGuildCommands(client.user.id, guildID), {
-						body : commands
+						body : []
 					});
 					console.log(`\u001B[36m` + `[✓] Registered Commands` + `\u001B[33m ` + `Locally` + `\u001B[0m`);
-				}	
+				}
 			} catch (err) {
 				if (err) {
 					console.log(`\u001B[31m` + `[x] ${err}` + `\u001B[0m`);
