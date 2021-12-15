@@ -5,7 +5,7 @@ var Embed = new Discord.MessageEmbed()
 	.setColor('#04D277')
 	.setTitle('Help Commands:')
 	.setDescription(
-		'Your command should start with `/`. Use \\ to ignore any escape sequences. (Help Command Inspired from Python BOT)\n\u200B'
+		'Your command should start with `/`. Use \\ to ignore any escape sequences.\n\u200B'
 	)
 	.setThumbnail('https://i.imgur.com/rNul59J.png')
 	.addFields(
