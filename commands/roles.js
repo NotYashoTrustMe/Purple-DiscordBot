@@ -1,12 +1,24 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageActionRow,  MessageEmbed, MessageSelectMenu } = require('discord.js');
+const { MessageActionRow, MessageEmbed, MessageSelectMenu } = require('discord.js');
 
 module.exports = {
-	data    : new SlashCommandBuilder().setName('roles').setDescription('pong'),
+	data    : new SlashCommandBuilder()
+		.setName('roles')
+		.setDescription('Use this command in your self-role-assignment channel'),
 	async execute(interaction) {
+		// check is the interaction is from the admin
+		if (!interaction.member.permissions.has('ADMINISTRATOR')) {
+			await interaction.reply({ content: 'You are not allowed to use this command', ephemeral: true });
+			return;
+		}
+
 		await interaction.deferReply();
 
-		await interaction.editReply({files: ["https://i.imgur.com/i59eMLq.png"]});
+		await interaction.editReply({
+			files: [
+				'https://i.imgur.com/i59eMLq.png'
+			]
+		});
 
 		const Embed = new MessageEmbed()
 			.setTitle('Select Your Roles Role')
@@ -17,7 +29,7 @@ module.exports = {
 
 				{ name: 'Art 🎨', value: 'Graphic Designers, Paintings, Illustration, Animation and more ' },
 
-				{ name  : 'Music 🎵', value : "Pianist? Know how to play that guitar 🎸? Well You're Welcome then "},
+				{ name: 'Music 🎵', value: "Pianist? Know how to play that guitar 🎸? Well You're Welcome then " },
 
 				{ name: 'Gaming 🎮', value: 'Where my boys at? ' },
 
@@ -41,43 +53,63 @@ module.exports = {
 				.setMaxValues(4)
 				.addOptions([
 					{
-						label       : 'Art 🎨',
+						label       : 'Art',
 						description : 'Graphic Designers, Paintings, Illustration, Animation and more',
-						value       : 'Art'
+						value       : 'Art',
+						emoji       : '🎨'
 					},
 					{
-						label       : 'Music 🎵',
+						label       : 'Music',
 						description : "Pianist? Know how to play that guitar 🎸? Well You're Welcome then",
-						value       : 'Music'
+						value       : 'Music',
+						emoji       : '🎵'
 					},
 					{
-						label       : 'Gaming 🎮',
+						label       : 'Gaming',
 						description : 'Where my boys at?',
-						value       : 'Gaming'
+						value       : 'Gaming',
+						emoji       : '🎮'
 					},
 					{
-						label       : 'Anime 👺',
+						label       : 'Anime',
 						description : 'For the anime lovers out there',
-						value       : 'Anime'
+						value       : 'Anime',
+						emoji       : '👺'
 					},
 					{
-						label       : 'Programming 💻',
+						label       : 'Programming',
 						description : 'All developers are welcome',
-						value       : 'Programming'
+						value       : 'Programming',
+						emoji       : '💻'
 					},
 					{
-						label       : 'Photography 📸',
+						label       : 'Photography',
 						description : "Interested in capturing the moment? Well, you're welcome!",
-						value       : 'Photography'
+						value       : 'Photography',
+						emoji       : '📸'
 					},
 					{
-						label       : 'Weeb 🏯',
+						label       : 'Weeb',
 						description : "Oh so you love Japan more than even you're country? lol me too",
-						value       : 'Weeb'
+						value       : 'Weeb',
+						emoji       : '🏯'
+					},
+					{
+						label: 'None',
+						description: 'To Remove All Roles',
+						emoji: '❌',
+						value: 'None'
 					}
 				])
 		);
 
-		await interaction.followUp({embeds: [Embed], components: [menu]});
+		await interaction.followUp({
+			embeds: [
+				Embed
+			],
+			components: [
+				menu
+			]
+		});
 	}
 };

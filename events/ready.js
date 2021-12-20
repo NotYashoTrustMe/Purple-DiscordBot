@@ -28,7 +28,7 @@ module.exports = {
 					await rest.put(Routes.applicationGuildCommands(client.user.id, guildID), {
 						body : commands
 					});
-					console.log(`\u001B[36m` + `[✓] Registered Commands` + `\u001B[33m ` + `Locally` + `\u001B[0m`);
+					console.log(`\u001B[36m` + `[✓] Registered Commands` + `\u001B[33m ` + `Locally` + `\u001B[0m\n`);
 					
 				}
 			} catch (err) {
