@@ -7,10 +7,16 @@ const db = new Database();
 db.connect();
 
 const client = new Client({
-	intents : [
+	intents  : [
 		Intents.FLAGS.GUILDS,
 		Intents.FLAGS.GUILD_MESSAGES,
 		Intents.FLAGS.GUILD_MEMBERS,
+		Intents.FLAGS.GUILD_MESSAGE_REACTIONS
+	],
+	partials : [
+		'MESSAGE',
+		'CHANNEL',
+		'REACTION'
 	]
 });
 
@@ -37,8 +43,6 @@ for (const file of eventFiles) {
 	else {
 		client.on(event.name, (...args) => event.execute(...args, commands));
 	}
-}	
-
-
+}
 
 client.login(process.env.TOKEN);
