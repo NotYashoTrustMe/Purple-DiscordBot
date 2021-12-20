@@ -13,10 +13,9 @@ module.exports = {
 					console.log(`Assigning ${role.name} role to ${interaction.user.username}`)
 					interaction.member.roles.add(role);
 					console.log('\u001B[32m'+'Role assigned'+'\u001B[0m')
-					interaction.deferUpdate();
-					interaction.member.send(`Congratulations 🎉!\n You have been assigned the ${role.name} role.`)
 				}
 			}
+			interaction.deferUpdate();
 			return;
 		}
 
