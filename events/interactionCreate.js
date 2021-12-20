@@ -1,26 +1,56 @@
+const { IntegrationApplication } = require('discord.js');
+
 module.exports = {
 	name    : 'interactionCreate',
 
 	async execute(interaction) {
 		if (!interaction) return;
-		
+
 		// For the select menus
 		if (interaction.isSelectMenu()) {
-			const roles = interaction.values;
-			for (i of roles) {
-				const role = interaction.member.guild.roles.cache.find(role => role.name == i)
-				if (role) {
-					console.log(`Assigning ${role.name} role to ${interaction.user.username}`)
-					interaction.member.roles.add(role);
-					console.log('\u001B[32m'+'Role assigned'+'\u001B[0m')
-				}
+			const rolesSelectedNames = interaction.values;
+
+			const rolesAvailableNames = [
+				'Art',
+				'Music',
+				'Gaming',
+				'Anime',
+				'Programming',
+				'Photography',
+				'Weeb'
+			];
+
+			const rolesSelected = [];
+			const rolesAvailable = [];
+
+			//? Changes the roles names to the actual roles
+
+			rolesAvailableNames.forEach((roleName) => {
+				const role = interaction.message.guild.roles.cache.find((role) => role.name === roleName);
+				if (role) rolesAvailable.push(role.id);
+			});
+
+			console.log('Roles selected: ' + rolesSelectedNames);
+			rolesSelectedNames.forEach((roleName) => {
+				const role = interaction.message.guild.roles.cache.find((role) => role.name === roleName);
+				if (role) rolesSelected.push(role.id);
+			});
+
+			// Removes the roles that are not selected
+
+			for (i of rolesAvailable) {
+				await interaction.member.roles.remove(i);
 			}
-			interaction.deferUpdate();
-			return;
+
+			for (i of rolesSelected) {
+				await interaction.member.roles.add(i);
+			}
+			
+			return interaction.deferUpdate();
 		}
 
 		// For slash commands
-		if (interaction.isCommand()) {
+		else if (interaction.isCommand()) {
 			const command = interaction.client.commands.get(interaction.commandName);
 			if (!command) return;
 			try {

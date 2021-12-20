@@ -37,7 +37,7 @@ module.exports = {
 			new MessageSelectMenu()
 				.setCustomId('select')
 				.setPlaceholder('Select Your Roles! [Max 4]')
-				.setMinValues(1)
+				.setMinValues(0)
 				.setMaxValues(4)
 				.addOptions([
 					{
