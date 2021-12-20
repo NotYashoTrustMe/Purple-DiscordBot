@@ -3,6 +3,12 @@ module.exports = {
 
 	async execute(interaction) {
 		if (!interaction) return;
+		
+		// For the buttons
+		if (interaction) {
+			console.log(interaction);
+		}
+		// For slash commands
 		if (!interaction.isCommand()) return;
 		const command = interaction.client.commands.get(interaction.commandName);
 		if (!command) return;
