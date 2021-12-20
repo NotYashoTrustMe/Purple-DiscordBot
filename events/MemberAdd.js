@@ -16,7 +16,7 @@ module.exports = {
 			.setColor('#03cafc')
 			.setTitle('New Member! 🎉')
 			.setDescription(
-				`${member.user} is now a member of Stonks! Have a great time here, visit our <#${generalChannel}> for chats and more!`
+				`${member.user} is now a member of ${member.guild.name}! Have a great time here, visit our <#${generalChannel}> for chats and more!`
 			)
 			.setThumbnail(member.user.displayAvatarURL())
 			.setTimestamp();

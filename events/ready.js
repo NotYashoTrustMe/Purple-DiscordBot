@@ -29,6 +29,7 @@ module.exports = {
 						body : commands
 					});
 					console.log(`\u001B[36m` + `[✓] Registered Commands` + `\u001B[33m ` + `Locally` + `\u001B[0m`);
+					
 				}
 			} catch (err) {
 				if (err) {
