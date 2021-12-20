@@ -12,6 +12,5 @@ module.exports = {
 		if (reaction.emoji.name === '✅' && message.channel.id === verifyChannel.id) {
 			member.roles.add(verify).catch(console.error);
 		}
-		message.reply('Hello World!');
 	}
 };
