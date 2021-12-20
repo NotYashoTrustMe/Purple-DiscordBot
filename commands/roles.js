@@ -43,37 +43,37 @@ module.exports = {
 					{
 						label       : 'Art 🎨',
 						description : 'Graphic Designers, Paintings, Illustration, Animation and more',
-						value       : 'art'
+						value       : 'Art'
 					},
 					{
 						label       : 'Music 🎵',
 						description : "Pianist? Know how to play that guitar 🎸? Well You're Welcome then",
-						value       : 'music'
+						value       : 'Music'
 					},
 					{
 						label       : 'Gaming 🎮',
 						description : 'Where my boys at?',
-						value       : 'gaming'
+						value       : 'Gaming'
 					},
 					{
 						label       : 'Anime 👺',
 						description : 'For the anime lovers out there',
-						value       : 'anime'
+						value       : 'Anime'
 					},
 					{
 						label       : 'Programming 💻',
 						description : 'All developers are welcome',
-						value       : 'programming'
+						value       : 'Programming'
 					},
 					{
 						label       : 'Photography 📸',
 						description : "Interested in capturing the moment? Well, you're welcome!",
-						value       : 'photography'
+						value       : 'Photography'
 					},
 					{
 						label       : 'Weeb 🏯',
 						description : "Oh so you love Japan more than even you're country? lol me too",
-						value       : 'weeb'
+						value       : 'Weeb'
 					}
 				])
 		);
