@@ -95,7 +95,7 @@ ___
 ### Contact Me 💌
           
 <a href = "https://discord.com/users/756407252587642911" target="_blank">
-<img src="https://img.shields.io/badge/Yasho_%234476-5340ff?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="">
+<img src="https://img.shields.io/badge/Yasho_%231076-5340ff?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="">
 </a>
 <a href = "https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank">
 <img src="https://img.shields.io/badge/wiredhack022@gmail.com-e9ff40?style=for-the-badge&amp;logo=gmail&amp;logoColor=black" alt="">
