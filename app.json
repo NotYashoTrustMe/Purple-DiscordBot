@@ -4,16 +4,16 @@
     "logo": "https://i.imgur.com/NoHbJTk.png",
     "env": {
         "TOKEN": {
-            "description": "Your Discord Bot's Token | Example:                                    GTEsdNjQ2MjIxasdU2Njk2OTcl.dgscEQQ.0gjhNbGeWBsKP6FVuIyZWlG2cMd",
+            "description": "Your Discord Bot's Token | Example:\nGTEsdNjQ2MjIxasdU2Njk2OTcl.dgscEQQ.0gjhNbGeWBsKP6FVuIyZWlG2cMd",
             "required": true
         },
         "MONGO_URL": {
-            "description": "Your MongoDB Database Url | Example:                                                    mongodb+srv://username:password@database-name.fa23.mongodb.net/collection-name?retryWrites=true&w=majority",
+            "description": "Your MongoDB Database Url | Example:\nmongodb+srv://username:password@database-name.fa23.mongodb.net/collection-name?retryWrites=true&w=majority",
             "required": true
         },
         "STAGE":
         {
-            "description": "In which stage do you want the bot to run in:                                       PRODUCTION / DEVELOPMENT [Recommended: Production]",
+            "description": "In which stage do you want the bot to run in:\nPRODUCTION / DEVELOPMENT [Recommended: Production]",
             "required": true
         }
     },
