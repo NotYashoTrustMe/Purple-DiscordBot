@@ -13,7 +13,7 @@
         },
         "STAGE":
         {
-            "description": "In which stage do you want the bot to run in:\nPRODUCTION / DEVELOPMENT [Recommended: Production]",
+            "description": "In which stage do you want the bot to run in:\nPRODUCTION / DEVELOPMENT | [Recommended: Production]",
             "required": true
         }
     },
