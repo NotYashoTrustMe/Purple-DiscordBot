@@ -7,32 +7,15 @@
             "description": "Your Discord Bot's Token | Example: GTEsdNjQ2MjIxasdU2Njk2OTcl.dgscEQQ.0gjhNbGeWBsKP6FVuIyZWlG2cMd",
             "required": true
         },
-        "GUILD_ID": {
-            "description": "Your Server ID | Example: 222078108977594368",
+        "MONGO_URL": {
+            "description": "Your MongoDB Database Url | Example: mongodb+srv://username:password@database-name.fad23.mongodb.net/Purple-DiscordBot?retryWrites=true&w=majority",
             "required": true
         },
         "STAGE":
         {
             "description": "In which stage do you want the bot to run in: PRODUCTION / DEVELOPMENT [Recommended Production]",
             "required": true
-        },
-        "GENERAL_CHANNEL": {
-            "description": "The ID of your General Channel | Example: 893053479038357524",
-            "required": true
-        },
-        "BOT_COMMANDS_CHANNEL": {
-            "description": "The ID of your Bot Commands Channel | Example: 908601642075693086",
-            "required": true
-        },
-        "MEMBER_LOG_CHANNEL": {
-            "description": "The ID of your Member Log Channel | Example: 909047268513038397",
-            "required": true
-        },
-        "MUSIC_CHANNEL": {
-            "description": "The ID of the music voice channel of your server. | Example: 910168557344653402",
-            "required": true
         }
-
     },
     "repository": "https://github.com/Yasho022/Purple-DiscordBot"
     }

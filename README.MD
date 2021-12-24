@@ -77,12 +77,12 @@ If everything goes well, you should see `[✓] Purple is Online` in the console.
 ## Run and Host ▶️ 
 ###  PC 💻
 You can run your bot on you pc with the command `npm start`. However the bot will be online while you are running the application.
-### Heroku (Recommended) 🖲️
-**_This is not a Paid Promotion_**<br>
+### Heroku 🖲️
 It is advised to host this bot on heroku for a free or a paid plan according to your needs as the bot will be online even if your PC is not running.
 
 
 <a href="https://heroku.com/deploy?template=https://github.com/Yasho022/Purple-DiscordBot" target="_blank"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku"></a>
+
 
 ---
 ### Tests 🧪 

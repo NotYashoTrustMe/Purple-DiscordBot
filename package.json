@@ -19,7 +19,10 @@
 		"npm": "^8.1.3"
 	},
 	"scripts": {
-		"start": "node bot.js"
+		"start": "node bot.js",
+		"enable": "heroku ps:scale worker=1 -a purple-discordbot",
+		"disable": "heroku ps:scale worker=0 -a purple-discordbot",
+		"status": "heroku maintenance -a purple-discordbot"
 	},
 	"author": "Yasho",
 	"license": "ISC",
