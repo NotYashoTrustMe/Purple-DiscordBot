@@ -46,12 +46,13 @@ module.exports = {
 				const memeLink = `https://reddit.com${permalink}`;
 				const memeContent = post.data.url;
 				const memeTitle = post.data.title;
+				const memeAuthor = post.data.author;
 
 				Embed.setTitle(`${memeTitle}`);
 				Embed.setURL(`${memeLink}`);
 				Embed.setColor('#6e6f85');
 				Embed.setImage(memeContent);
-				Embed.setFooter(`Source: ${subreddit}`);
+				Embed.setFooter(`Posted by ${memeAuthor} on ${subreddit}`); 
 
 				interaction.editReply({
 					embeds : [
