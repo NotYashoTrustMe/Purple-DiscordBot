@@ -22,12 +22,12 @@ const client = new Client({
 
 const commandFiles = readdirSync('./commands').filter((file) => file.endsWith('.js'));
 
-var commands = [];
+const commands = [];
 
 client.commands = new Collection();
 
-for (var file of commandFiles) {
-	var command = require(`./commands/${file}`);
+for (const file of commandFiles) {
+	const command = require(`./commands/${file}`);
 	commands.push(command.data.toJSON());
 	client.commands.set(command.data.name, command);
 }

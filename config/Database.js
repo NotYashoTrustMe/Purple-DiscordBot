@@ -5,9 +5,10 @@ class Database {
 	constructor() {
 		this.connection = null;
 	}
-	
+
 	connect() {
-		console.log('\u001B[32m' + '[.] Connecting to the database' + '\u001B[0m');
+		// print in purple color the message
+		console.log('\u001B[35m' + '[.] Connecting to the database' + '\u001B[0m');
 		mongoose
 			.connect(process.env.MONGO_URL, {
 				useNewUrlParser    : true,
@@ -18,7 +19,8 @@ class Database {
 				this.connection = mongoose.connection;
 			})
 			.catch((err) => {
-				console.error('\r\u001B[31m' + '[x] Error connecting to the database: ' + '\u001B[0m', err);
+				console.error('\r\u001B[31m' + '[x] Error connecting to the database\n' + '\u001B[0m', err);
+				process.exit(1);
 			});
 	}
 }

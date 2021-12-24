@@ -20,9 +20,10 @@
 	},
 	"scripts": {
 		"start": "node bot.js",
-		"enable": "heroku ps:scale worker=1 -a purple-discordbot",
-		"disable": "heroku ps:scale worker=0 -a purple-discordbot",
-		"status": "heroku maintenance -a purple-discordbot"
+		"enable": "heroku ps:scale worker=1 -a purple-discordbot && heroku maintenance:off -a purple-discordbot",
+		"disable": "heroku ps:scale worker=0 -a purple-discordbot && heroku maintenance:on -a purple-discordbot",
+		"status": "heroku ps worker -a purple-discordbot",
+		"log": "heroku logs -t -n 10 -a purple-discordbot"
 	},
 	"author": "Yasho",
 	"license": "ISC",
