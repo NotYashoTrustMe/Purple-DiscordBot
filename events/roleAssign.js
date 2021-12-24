@@ -9,7 +9,6 @@ module.exports = {
 				if (!interaction) return;
 
 				if (interaction.isSelectMenu()) {
-
 					const rolesAvailableNames = [];
 					for (i in interaction.component.options) {
 						rolesAvailableNames.push(interaction.component.options[i].label);
