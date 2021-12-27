@@ -3,7 +3,7 @@
 <div>
 
 # Purple - A Discord JS Bot
-## Release 1.5 🦄
+## Release v1.5 🦄
 
 An open-source discord bot for fun and moderation.
 
