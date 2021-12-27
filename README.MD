@@ -42,7 +42,7 @@ An open-source discord bot for fun and moderation.
 - No code required
 - Slash Commands
 - Auto-Mod
-- Brings back Discord's @anyone
+- Brings back Discord's @someone
 - Memes, quotes, jokes and much more...
 
 ## Installation and Setup 🔃 
