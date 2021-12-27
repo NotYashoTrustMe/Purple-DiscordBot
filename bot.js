@@ -20,18 +20,23 @@ const client = new Client({
 	]
 });
 
-const commandFiles = readdirSync('./commands').filter((file) => file.endsWith('.js'));
-commandFiles.append(readdirSync('./commands/setup').filter((file) => file.endsWith('.js')));
-commandFiles.append(readdirSync('./commands/fun').filter((file) => file.endsWith('.js')));
-commandFiles.append(readdirSync('./commands/moderation').filter((file) => file.endsWith('.js')));
-commandFiles.append(readdirSync('./commands/musicBot').filter((file) => file.endsWith('.js')));
+const commandFiles = [];
+
+// Gets files inside the folders inside of the root "commands" folder
+// Ignores the test folder
+readdirSync('commands').forEach((dir) => {
+	'test' != dir &&
+		readdirSync(`commands/${dir}`).forEach((file) => {
+			file.endsWith('.js') && commandFiles.push(`./commands/${dir}/${file}`);
+		});
+});
 
 const commands = [];
 
 client.commands = new Collection();
 
 for (const file of commandFiles) {
-	const command = require(`./commands/${file}`);
+	const command = require(file);
 	commands.push(command.data.toJSON());
 	client.commands.set(command.data.name, command);
 }

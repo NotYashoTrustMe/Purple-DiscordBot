@@ -9,6 +9,7 @@ module.exports = {
 	once    : true,
 
 	execute(client, commands) {
+
 		const rest = new REST({
 			version : '9'
 		}).setToken(process.env.TOKEN);
@@ -19,13 +20,10 @@ module.exports = {
 
 			try {
 				if (process.env.STAGE == 'production') {
-					await rest.put(Routes.applicationCommands(client.user.id, guildID), { body: [] });
+					await rest.put(Routes.applicationCommands(client.user.id, guildID), { body: commands });
 					console.log('['.black + '✓'.cyan + '] '.black + 'Registered Commands '.green + 'Globally'.yellow);
 				}
 				else {
-					/* 
-					* await rest.put(Routes.applicationGuildCommands(client.user.id, guildID), {body: commands});
-				   */
 					await rest.put(Routes.applicationGuildCommands(client.user.id, guildID), {
 						body : commands
 					});
