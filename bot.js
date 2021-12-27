@@ -11,7 +11,8 @@ const client = new Client({
 		Intents.FLAGS.GUILDS,
 		Intents.FLAGS.GUILD_MESSAGES,
 		Intents.FLAGS.GUILD_MEMBERS,
-		Intents.FLAGS.GUILD_MESSAGE_REACTIONS
+		Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
+		Intents.FLAGS.GUILD_VOICE_STATES
 	],
 	partials : [
 		'MESSAGE',
@@ -52,3 +53,5 @@ for (const file of eventFiles) {
 		client.on(event.name, (...args) => event.execute(...args, commands));
 	}
 }
+
+client.login(process.env.TOKEN);
