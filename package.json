@@ -24,7 +24,7 @@
 		"heroku-enable": "heroku ps:scale worker=1 -a purple-discordbot",
 		"heroku-disable": "heroku ps:scale worker=0 -a purple-discordbot",
 		"heroku-status": "heroku ps -a purple-discordbot",
-		"heroku-log": "heroku logs -t -n 10 -a purple-discordbot"
+		"heroku-log": "heroku logs -t -a purple-discordbot"
 	},
 	"author": "Yasho",
 	"license": "ISC",
