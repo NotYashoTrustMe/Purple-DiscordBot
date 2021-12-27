@@ -7,6 +7,20 @@ module.exports = {
 		if (message.author.bot) return;
 		originalMessage = message.content;
 
+		// Bring back @anyone
+		if (originalMessage.includes('@anyone')) {
+			const members = await message.guild.members.fetch();
+			var member = members.random();
+
+            while (member.user.bot || member.user.id === message.author.id) {
+                member = await members.random();
+            }
+
+			const messageSent = message.channel.send(`${member}`).catch(console.error);
+
+            messageSent.then((msg) => msg.delete()).catch(console.error);
+		}
+
 		const banned = [];
 
 		for (i of bannedList.words) {
