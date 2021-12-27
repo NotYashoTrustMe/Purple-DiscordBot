@@ -7,8 +7,8 @@ module.exports = {
 		if (message.author.bot) return;
 		originalMessage = message.content;
 
-		// Bring back @anyone
-		if (originalMessage.includes('@anyone')) {
+		// Bring back @someone
+		if (originalMessage.includes('@someone')) {
 			const members = await message.guild.members.fetch();
 			var member = members.random();
 
