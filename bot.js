@@ -21,6 +21,10 @@ const client = new Client({
 });
 
 const commandFiles = readdirSync('./commands').filter((file) => file.endsWith('.js'));
+commandFiles.append(readdirSync('./commands/setup').filter((file) => file.endsWith('.js')));
+commandFiles.append(readdirSync('./commands/fun').filter((file) => file.endsWith('.js')));
+commandFiles.append(readdirSync('./commands/moderation').filter((file) => file.endsWith('.js')));
+commandFiles.append(readdirSync('./commands/musicBot').filter((file) => file.endsWith('.js')));
 
 const commands = [];
 

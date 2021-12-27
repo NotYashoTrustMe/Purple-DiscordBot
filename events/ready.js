@@ -1,6 +1,7 @@
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 const GuildSettings = require('../models/GuildSettings.js');
+var colors = require('colors');
 require('dotenv').config();
 
 module.exports = {
@@ -19,7 +20,7 @@ module.exports = {
 			try {
 				if (process.env.STAGE == 'production') {
 					await rest.put(Routes.applicationCommands(client.user.id, guildID), { body: [] });
-					console.log(`\u001B[36m` + `[✓] Registered Commands ` + `\u001B[32m` + `Globally` + `\u001B[0m`);
+					console.log('['.black + '✓'.cyan + '] '.black + 'Registered Commands '.green + 'Globally'.yellow);
 				}
 				else {
 					/* 
@@ -28,17 +29,16 @@ module.exports = {
 					await rest.put(Routes.applicationGuildCommands(client.user.id, guildID), {
 						body : commands
 					});
-					console.log(`\u001B[36m` + `[✓] Registered Commands` + `\u001B[33m ` + `Locally` + `\u001B[0m\n`);
-					
+					console.log('['.black + '✓'.cyan + '] '.black + 'Registered Commands '.green + 'Locally'.yellow);
 				}
 			} catch (err) {
 				if (err) {
-					console.log(`\u001B[31m` + `[x] ${err}` + `\u001B[0m`);
+					console.log('['.black + 'x'.red + '] '.black + 'Error'.red +'\n' + err);
 				}
 			}
 		})();
 
-		console.log(`\u001B[36m` + `[✓] Purple is Online` + `\u001B[0m`);
+		console.log('['.black + '✓'.cyan + '] '.black + 'Purple is Online'.green);
 		client.user.setActivity(`Commands ▲ /help`);
 	}
 };

@@ -1,12 +1,15 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const GuildSettings = require('../models/GuildSettings');
+const GuildSettings = require('../../models/GuildSettings');
 
 module.exports = {
 	data    : new SlashCommandBuilder()
-		.setName('set-general-channel')
-		.setDescription('Set the main channel where new members will be redirected to ')
+		.setName('set-welcome-channel')
+		.setDescription('Set the channel where the welcome message will be sent.')
 		.addChannelOption((option) =>
-			option.setName('channel').setDescription('The channel to set as the general channel').setRequired(true)
+			option
+				.setName('channel')
+				.setDescription('The channel where the welcome message will be sent.')
+				.setRequired(true)
 		),
 	async execute(interaction) {
 		await interaction.deferReply();
@@ -16,11 +19,11 @@ module.exports = {
 			return;
 		}
 
-		GuildSettings.findOne({ guildID: interaction.guild.id }, (err, settings) => {
+		GuildSettings.findOne({ guild_id: interaction.guild.id }, (err, settings) => {
 			if (err) {
 				console.error(err);
 				interaction.editReply({
-					content   : 'An error occurred while trying to set the general channel.',
+					content   : 'An error occurred while trying to set the welcome channel.',
 					ephemeral : true
 				});
 				return;
@@ -28,29 +31,29 @@ module.exports = {
 
 			if (!settings) {
 				settings = new GuildSettings({
-					guildID        : interaction.guild.id,
-					generalChannel : interaction.options.getChannel('channel').id
+					guildId        : interaction.guild.id,
+					welcomeChannel : interaction.options.getChannel('channel').id
 				});
 			}
 			else {
-				settings.generalChannel = interaction.options.getChannel('channel').id;
+				settings.welcomeChannel = interaction.options.getChannel('channel').id;
 			}
 			settings.save((err) => {
 				if (err) {
 					console.error(err);
 					interaction.editReply({
-						content   : 'An error occurred while trying to set the general channel.',
+						content   : 'An error occurred while trying to set the welcome channel.',
 						ephemeral : true
 					});
 					return;
 				}
 				else {
-					const generalChannel = interaction.options.getChannel('channel').id;
+					const welcomeChannel = interaction.options.getChannel('channel').id;
 					const okayEmoji = interaction.guild.emojis.cache.find((emoji) => emoji.name === 'nice');
 					interaction.editReply(
 						okayEmoji
-							? `General channel set to <#${generalChannel}> ${okayEmoji}`
-							: `General channel set to <#${generalChannel}>`
+							? `Welcome channel set to <#${welcomeChannel}> ${okayEmoji}`
+							: `Welcome channel set to <#${welcomeChannel}>`
 					);
 				}
 			});
