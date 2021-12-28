@@ -52,7 +52,7 @@ An open-source discord bot for fun and moderation.
 
 1. Open the `.environ` file and rename it to `.env` and fill up the following details:
     - `TOKEN="your_token_here"`
-    - `MONGO_URL="-your mongodb url"`
+    - `MONGO_URL="-your mongodb url"` [Create one](https://www.mongodb.com/basics/create-database)
     - `STAGE="development"`
 1. Install the required dependencies with:
     ```shell
