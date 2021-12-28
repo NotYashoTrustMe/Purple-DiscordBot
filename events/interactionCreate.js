@@ -4,7 +4,8 @@ module.exports = {
 	async execute(interaction) {
 		if (!interaction) return;
 
-		// For slash commands
+		// ################################## SLASH COMMANDS ##################################
+
 		if (interaction.isCommand()) {
 			const command = interaction.client.commands.get(interaction.commandName);
 			if (!command) return;
@@ -15,5 +16,47 @@ module.exports = {
 				await interaction.reply({ content: 'Sorry, Your command could not be processed :(', ephemeral: true });
 			}
 		}
+
+
+		// ################################## ROLES ASSSIGNMENT ##################################
+
+		else if (interaction.isSelectMenu()) {
+			console.log(interaction.member.user.username + ' has selected ' + interaction.values);
+			const rolesAvailableNames = [];
+			for (i in interaction.component.options) {
+				rolesAvailableNames.push(interaction.component.options[i].label);
+			}
+			const rolesSelectedNames = interaction.values;
+
+			const rolesSelected = [];
+			const rolesAvailable = [];
+
+			// Changes the roles names to the actual roles
+
+			rolesAvailableNames.forEach((roleName) => {
+				const role = interaction.message.guild.roles.cache.find((role) => role.name === roleName);
+				if (role) rolesAvailable.push(role.id);
+			});
+
+			rolesSelectedNames.forEach((roleName) => {
+				const role = interaction.message.guild.roles.cache.find((role) => role.name === roleName);
+				if (role) rolesSelected.push(role.id);
+			});
+
+			if (rolesSelectedNames.includes('None')) {
+				for (i of rolesAvailable) {
+					if (!interaction.member.roles.cache.has(i)); // If the user doesn't have the role
+					await interaction.member.roles.remove(i);
+				}
+				return await interaction.deferUpdate();
+			}
+
+			for (i of rolesSelected) {
+				await interaction.member.roles.add(i);
+			}
+
+			return await interaction.deferUpdate();
+		}
+
 	}
 };

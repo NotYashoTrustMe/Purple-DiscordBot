@@ -21,7 +21,7 @@ module.exports = {
 		});
 
 		const Embed = new MessageEmbed()
-			.setTitle('Select Your Roles Role')
+			.setTitle('Select Your Roles!')
 			.setThumbnail('https://i.imgur.com/jMdib7l.png')
 			.setDescription('Choose Roles which best suit you')
 			.addFields([
