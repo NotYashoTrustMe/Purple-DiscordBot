@@ -7,14 +7,14 @@ const db = new Database();
 db.connect();
 
 const client = new Client({
-	intents  : [
+	intents: [
 		Intents.FLAGS.GUILDS,
 		Intents.FLAGS.GUILD_MESSAGES,
 		Intents.FLAGS.GUILD_MEMBERS,
 		Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
 		Intents.FLAGS.GUILD_VOICE_STATES
 	],
-	partials : [
+	partials: [
 		'MESSAGE',
 		'CHANNEL',
 		'REACTION'
