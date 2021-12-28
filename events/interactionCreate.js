@@ -16,11 +16,9 @@ module.exports = {
 				await interaction.reply({ content: 'Sorry, Your command could not be processed :(', ephemeral: true });
 			}
 		}
-
-
-		// ################################## ROLES ASSSIGNMENT ##################################
-
 		else if (interaction.isSelectMenu()) {
+			// ################################## ROLES ASSSIGNMENT ##################################
+
 			console.log(interaction.member.user.username + ' has selected ' + interaction.values);
 			const rolesAvailableNames = [];
 			for (i in interaction.component.options) {
@@ -34,12 +32,12 @@ module.exports = {
 			// Changes the roles names to the actual roles
 
 			rolesAvailableNames.forEach((roleName) => {
-				const role = interaction.message.guild.roles.cache.find((role) => role.name === roleName);
+				const role = interaction.message.guild.roles.cache.find((role) => role.name == roleName);
 				if (role) rolesAvailable.push(role.id);
 			});
 
 			rolesSelectedNames.forEach((roleName) => {
-				const role = interaction.message.guild.roles.cache.find((role) => role.name === roleName);
+				const role = interaction.message.guild.roles.cache.find((role) => role.name == roleName);
 				if (role) rolesSelected.push(role.id);
 			});
 
@@ -57,6 +55,5 @@ module.exports = {
 
 			return await interaction.deferUpdate();
 		}
-
 	}
 };

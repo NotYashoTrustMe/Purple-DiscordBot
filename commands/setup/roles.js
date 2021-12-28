@@ -15,7 +15,7 @@ module.exports = {
 		await interaction.deferReply();
 
 		await interaction.editReply({
-			files: [
+			files : [
 				'https://i.imgur.com/i59eMLq.png'
 			]
 		});
@@ -37,7 +37,7 @@ module.exports = {
 
 				{ name: 'Programming 💻', value: 'All developers are welcome ' },
 
-				{ name: 'Photography 📸', value: "Interested in capturing the moment? Well, you're welcome! " },
+				{ name: 'Memes 🐸', value: 'Never Gonna Give You Up!' },
 
 				{ name: 'Weeb 🏯', value: "Oh so you love Japan more than even you're country? lol me too " },
 
@@ -83,10 +83,10 @@ module.exports = {
 						emoji       : '💻'
 					},
 					{
-						label       : 'Photography',
-						description : "Interested in capturing the moment? Well, you're welcome!",
-						value       : 'Photography',
-						emoji       : '📸'
+						label       : 'Memes 🐸',
+						description : 'Never Gonna Give You Up!',
+						emoji       : '🐸',
+						value       : 'Memes'
 					},
 					{
 						label       : 'Weeb',
@@ -95,19 +95,19 @@ module.exports = {
 						emoji       : '🏯'
 					},
 					{
-						label: 'None',
-						description: 'To Remove All Roles',
-						emoji: '❌',
-						value: 'None'
+						label       : 'None',
+						description : 'To Remove All Roles',
+						emoji       : '❌',
+						value       : 'None'
 					}
 				])
 		);
 
 		await interaction.followUp({
-			embeds: [
+			embeds     : [
 				Embed
 			],
-			components: [
+			components : [
 				menu
 			]
 		});
