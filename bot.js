@@ -21,6 +21,7 @@ const client = new Client({
 	]
 });
 
+
 const commandFiles = [];
 
 // Gets files inside the folders inside of the root "commands" folder
