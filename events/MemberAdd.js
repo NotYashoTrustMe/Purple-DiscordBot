@@ -8,7 +8,7 @@ module.exports = {
 		console.log(`${member.user.username} has joined ${member.guild.name}`);
 		const guildSettings = await GuildSettings.findOne({ guildID: member.guild.id });
 
-		if (!guildSettings && !guildSettings.welcomeChannel) return;
+		if (!guildSettings || !guildSettings.welcomeChannel) return;
 
 		const welcomeChannel = member.guild.channels.cache.get(guildSettings.welcomeChannel);
 		const generalChannel = guildSettings.generalChannel;

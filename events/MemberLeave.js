@@ -7,7 +7,7 @@ module.exports = {
 		console.log(`${member.user.username} has left the server.`);
 		const guildSettings = await GuildSettings.findOne({ guildID: member.guild.id });
 
-		if (!guildSettings && !guildSettings.welcomeChannel) return;
+		if (!guildSettings || !guildSettings.welcomeChannel) return;
 		const memberChannel = member.guild.channels.cache.get(guildSettings.welcomeChannel);
 		const memberEmbed = new Discord.MessageEmbed()
 			.setColor('#ff2660')
