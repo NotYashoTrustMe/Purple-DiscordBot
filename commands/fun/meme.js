@@ -52,7 +52,7 @@ module.exports = {
 				Embed.setURL(`${memeLink}`);
 				Embed.setColor('#6e6f85');
 				Embed.setImage(memeContent);
-				Embed.setFooter(`Posted by ${memeAuthor} on ${subreddit}`); 
+				Embed.setFooter({ name: `Posted by ${memeAuthor} on ${subreddit}` }); 
 
 				interaction.editReply({
 					embeds : [

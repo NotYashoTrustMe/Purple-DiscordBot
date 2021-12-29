@@ -9,7 +9,7 @@ module.exports = {
 		const quote = await getQuote();
 		var Embed = new MessageEmbed()
 			.setColor('#616c99')
-			.setAuthor('Type.fit - Quotes', 'https://i.imgur.com/91ECqy3.jpeg', 'https://type.fit/api/quotes')
+			.setAuthor({ name: 'Type.fit - Quotes', iconURL: 'https://i.imgur.com/91ECqy3.jpeg', url: 'https://type.fit/api/quotes'})
 			.setTitle('⠀⠀⠀\n' + quote['text'])
 			.setDescription('~ ' + quote['author'] + '\n⠀⠀⠀');
 		interaction.editReply({

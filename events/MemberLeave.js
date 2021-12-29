@@ -20,6 +20,6 @@ module.exports = {
 			embeds : [
 				memberEmbed
 			]
-		});
+		}).catch(console.error);
 	}
 };

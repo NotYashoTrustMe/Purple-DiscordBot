@@ -22,7 +22,7 @@ module.exports = {
 			embed
 				.setColor('#ffe600')
 				.setTitle(delivery ? `${setup} || ${delivery} ||` : setup)
-				.setFooter(`Powered by ${url}`);
+				.setFooter({text: `Powered by ${url}`});
 		}
 		else {
 			var fannyEmoji = interaction.guild.emojis.cache.find((emoji) => emoji.name === 'fanny');
