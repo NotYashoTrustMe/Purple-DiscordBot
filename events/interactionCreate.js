@@ -16,6 +16,7 @@ module.exports = {
 				await interaction.reply({ content: 'Sorry, Your command could not be processed :(', ephemeral: true });
 			}
 		}
+		
 		else if (interaction.isSelectMenu()) {
 			// ################################## ROLES ASSSIGNMENT ##################################
 
