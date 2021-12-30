@@ -3,7 +3,7 @@ const Database = require('./config/Database.js');
 const { readdirSync } = require('fs');
 const { Client, Intents, Collection } = require('discord.js');
 
-
+// Token: OTA4MjAxNzgwNDk0NjA2MzU2.YYyS0g.lFYBhS6_EN04EH5SQg3RK4vP0E8
 
 const db = new Database();
 db.connect();
