@@ -7,6 +7,8 @@ module.exports = {
 		if (message.author.bot) return;
 		originalMessage = message.content;
 
+		// message.guild.commands.set([]) to delete comamnds
+
 		// Bring back @someone
 		if (originalMessage.includes('@someone')) {
 			const members = await message.guild.members.fetch();

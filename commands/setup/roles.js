@@ -6,6 +6,7 @@ module.exports = {
 		.setName('roles')
 		.setDescription('Use this command in your self-role-assignment channel'),
 	async execute(interaction) {
+
 		// check is the interaction is from the admin
 		if (!interaction.member.permissions.has('ADMINISTRATOR')) {
 			await interaction.reply({ content: 'You are not allowed to use this command', ephemeral: true });
@@ -60,7 +61,7 @@ module.exports = {
 					},
 					{
 						label       : 'Music',
-						description : "Pianist? Know how to play that guitar 🎸? Well You're Welcome then",
+						description : "For those who're interested in music",
 						value       : 'Music',
 						emoji       : '🎵'
 					},
@@ -83,10 +84,10 @@ module.exports = {
 						emoji       : '💻'
 					},
 					{
-						label       : 'Memes 🐸',
+						label       : 'Memes',
 						description : 'Never Gonna Give You Up!',
-						emoji       : '🐸',
-						value       : 'Memes'
+						value       : 'Memes',
+						emoji       : '🐸'
 					},
 					{
 						label       : 'Weeb',
@@ -97,8 +98,8 @@ module.exports = {
 					{
 						label       : 'None',
 						description : 'To Remove All Roles',
-						emoji       : '❌',
-						value       : 'None'
+						value       : 'None',
+						emoji       : '❌'
 					}
 				])
 		);

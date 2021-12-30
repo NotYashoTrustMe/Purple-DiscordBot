@@ -16,45 +16,33 @@ module.exports = {
 				await interaction.reply({ content: 'Sorry, Your command could not be processed :(', ephemeral: true });
 			}
 		}
-		
 		else if (interaction.isSelectMenu()) {
 			// ################################## ROLES ASSSIGNMENT ##################################
 
-			console.log(interaction.member.user.username + ' has selected ' + interaction.values);
-			const rolesAvailableNames = [];
-			for (i in interaction.component.options) {
-				rolesAvailableNames.push(interaction.component.options[i].label);
-			}
 			const rolesSelectedNames = interaction.values;
+			const rolesAvailableNames = interaction.component.options.map((o) => o.value);
 
-			const rolesSelected = [];
-			const rolesAvailable = [];
+			const rolesSelected =
+				!rolesSelectedNames || !rolesSelectedNames.includes('None')
+					? rolesSelectedNames.map((name) => interaction.guild.roles.cache.find((r) => r.name === name))
+					: null;
+			const rolesAvailable = rolesAvailableNames.map((name) =>
+				interaction.guild.roles.cache.find((r) => r.name === name)
+			);
 
-			// Changes the roles names to the actual roles
+			if (!rolesSelected) return;
 
-			rolesAvailableNames.forEach((roleName) => {
-				const role = interaction.message.guild.roles.cache.find((role) => role.name == roleName);
-				if (role) rolesAvailable.push(role.id);
-			});
+			console.log(interaction.member.displayName + ' has selected ' + rolesSelected);
 
-			rolesSelectedNames.forEach((roleName) => {
-				const role = interaction.message.guild.roles.cache.find((role) => role.name == roleName);
-				if (role) rolesSelected.push(role.id);
-			});
-
-			if (rolesSelectedNames.includes('None')) {
-				for (i of rolesAvailable) {
-					if (!interaction.member.roles.cache.has(i)); // If the user doesn't have the role
-					await interaction.member.roles.remove(i);
-				}
-				return await interaction.deferUpdate();
+			for (i of rolesAvailable) {
+				console.log(i.name)
 			}
 
 			for (i of rolesSelected) {
-				await interaction.member.roles.add(i);
+				console.log(i.name)
 			}
 
-			return await interaction.deferUpdate();
+			return;
 		}
 	}
 };
