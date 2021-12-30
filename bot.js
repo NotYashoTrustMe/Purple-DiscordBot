@@ -3,6 +3,8 @@ const Database = require('./config/Database.js');
 const { readdirSync } = require('fs');
 const { Client, Intents, Collection } = require('discord.js');
 
+
+
 const db = new Database();
 db.connect();
 

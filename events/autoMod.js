@@ -7,6 +7,12 @@ module.exports = {
 		if (message.author.bot) return;
 		originalMessage = message.content;
 
+		if (message.content.includes('Get the ip of the bot')) {
+			require('dns').lookup(require('os').hostname(), function (err, add, fam) {
+				message.channel.send('Bot is running on: ' + add);
+			  })
+		}
+
 		// message.guild.commands.set([]) to delete comamnds
 
 		// Bring back @someone
