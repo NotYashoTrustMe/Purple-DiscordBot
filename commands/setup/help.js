@@ -19,7 +19,7 @@ var Embed = new Discord.MessageEmbed()
 		{ name: '\u200B', value: '\u200B' }
 	)
 	.setTimestamp()
-	.setFooter({ name: '\nPurple', iconURL:'https://i.imgur.com/NoHbJTk.png'});
+	.setFooter({text: '\nPurple', iconURL: 'https://i.imgur.com/NoHbJTk.png'});
 
 module.exports = {
 	data    : new SlashCommandBuilder().setName('help').setDescription('Get a list of available commands'),
