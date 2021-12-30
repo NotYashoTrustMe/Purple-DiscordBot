@@ -7,20 +7,19 @@ const db = new Database();
 db.connect();
 
 const client = new Client({
-	intents: [
+	intents  : [
 		Intents.FLAGS.GUILDS,
 		Intents.FLAGS.GUILD_MESSAGES,
 		Intents.FLAGS.GUILD_MEMBERS,
 		Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
 		Intents.FLAGS.GUILD_VOICE_STATES
 	],
-	partials: [
+	partials : [
 		'MESSAGE',
 		'CHANNEL',
 		'REACTION'
 	]
 });
-
 
 const commandFiles = [];
 
@@ -56,3 +55,14 @@ for (const file of eventFiles) {
 }
 
 client.login(process.env.TOKEN);
+
+
+/*
+Webhooks can send anchors (markdown)
+
+https://discohook.org/
+To send anchors to a channel:
+
+Like this: [Discohook](https://discohook.app/discord)
+
+*/

@@ -25,9 +25,9 @@ module.exports = {
 				.setFooter({text: `Powered by ${url}`});
 		}
 		else {
-			var fannyEmoji = interaction.guild.emojis.cache.find((emoji) => emoji.name === 'fanny');
-			fannyEmoji = fannyEmoji ? fannyEmoji.toString() : '';
-			embed.setColor('#ffe600').setTitle(json.joke + ' ' + fannyEmoji).setFooter(`Powered by ${url}`);
+			var funnyEmoji = interaction.guild.emojis.cache.find((emoji) => emoji.name === 'fanny');
+			funnyEmoji = funnyEmoji ? funnyEmoji.toString() : '';
+			embed.setColor('#ffe600').setTitle(json.joke + ' ' + funnyEmoji).setFooter(`Powered by ${url}`);
 		}
 
 		await interaction.editReply({
