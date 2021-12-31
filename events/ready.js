@@ -37,6 +37,6 @@ module.exports = {
 		})();
 
 		console.log('['.black + '✓'.cyan + '] '.black + 'Purple is Online'.green);
-		client.user.setActivity(`Commands ▲ /help`);
+		client.user.setActivity('Help Commands | /help', { type: 'STREAMING' });
 	}
 };
