@@ -28,7 +28,6 @@ module.exports = {
 				'r/funny',
 				'r/wholesomememes',
 				'r/raimimemes',
-				'r/memeeconomy'
 			];
 			subreddit = choice(memeSub);
 		}
@@ -52,7 +51,7 @@ module.exports = {
 				Embed.setURL(`${memeLink}`);
 				Embed.setColor('#6e6f85');
 				Embed.setImage(memeContent);
-				Embed.setFooter({ name: `Posted by ${memeAuthor} on ${subreddit}` }); 
+				Embed.setFooter({ text: `Posted by ${memeAuthor} on ${subreddit}` }); 
 
 				interaction.editReply({
 					embeds : [
@@ -61,6 +60,7 @@ module.exports = {
 				});
 			})
 			.catch((HTTPError) => {
+				console.log(HTTPError);
 				interaction.editReply("The subreddit is either NSFW or doesn't exist");
 			});
 		//
