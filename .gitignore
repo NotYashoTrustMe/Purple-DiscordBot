@@ -3,4 +3,4 @@ node_modules/
 test
 /.env
 /images/logo
-/config/bannedList.json
+bannedList.json
