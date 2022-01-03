@@ -55,13 +55,3 @@ for (const file of eventFiles) {
 }
 
 client.login(process.env.TOKEN);
-
-/*
-Webhooks can send anchors (markdown)
-
-https://discohook.org/
-To send anchors to a channel:
-
-Like this: [Discohook](https://discohook.app/discord)
-
-*/
