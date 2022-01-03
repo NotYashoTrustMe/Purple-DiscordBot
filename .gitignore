@@ -3,4 +3,3 @@ node_modules/
 test
 /.env
 /images/logo
-bannedList.json
