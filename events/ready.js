@@ -14,11 +14,10 @@ module.exports = {
 		}).setToken(process.env.TOKEN);
 
 		(async () => {
-			const guildSettings = await GuildSettings.findOne({});
 
 			try {
 				await rest.put(Routes.applicationCommands(client.user.id), { body: commands });
-				console.log('['.black + '✓'.cyan + '] '.black + 'Registered Commands '.green + 'Globally'.yellow);
+				console.log('['.black + '✓'.cyan + '] '.black + 'Registered Commands '.green + 'Globally'.yellow + '\n');
 			} catch (err) {
 				if (err) {
 					console.log('['.black + 'x'.red + '] '.black + 'Error'.red + '\n' + err);

@@ -3,12 +3,15 @@ const GuildSettings = require('../models/GuildSettings.js');
 
 module.exports = {
 	name    : 'guildMemberRemove',
+
 	async execute(member) {
-		console.log(`${member.user.username} has left the server.`);
 		const guildSettings = await GuildSettings.findOne({ guildID: member.guild.id });
 
-		if (!guildSettings || !guildSettings.welcomeChannel) return;
-		const memberChannel = member.guild.channels.cache.get(guildSettings.welcomeChannel);
+		if (!guildSettings.welcomeChannel) return;
+
+		const memberChannel = member.guild.channels.cache.find(
+			(channel) => channel.id === guildSettings.welcomeChannel
+		);
 		const memberEmbed = new Discord.MessageEmbed()
 			.setColor('#ff2660')
 			.setTitle('Member Left 💀')
@@ -16,10 +19,19 @@ module.exports = {
 			.setThumbnail(member.user.displayAvatarURL())
 			.setTimestamp();
 
-		memberChannel.send({
-			embeds : [
-				memberEmbed
-			]
-		}).catch(console.error);
+		if (!memberChannel) {
+			console.log('Channels not set');
+			return;
+		}
+
+		await memberChannel
+			.send({
+				embeds : [
+					memberEmbed
+				]
+			})
+			.then(() => {
+				console.log(`${member.user.username} has left ${member.guild.name}`);
+			});
 	}
 };

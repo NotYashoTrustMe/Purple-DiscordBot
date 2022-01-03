@@ -5,29 +5,36 @@ module.exports = {
 	name    : 'guildMemberAdd',
 
 	async execute(member) {
-		console.log(`${member.user.username} has joined ${member.guild.name}`);
 		const guildSettings = await GuildSettings.findOne({ guildID: member.guild.id });
 
-		if (!guildSettings || !guildSettings.welcomeChannelID) return;
-
-		const welcomeChannel = member.guild.channels.cache.get(guildSettings.welcomeChannel);
+		const memberChannel = member.guild.channels.cache.find(channel => channel.id === guildSettings.welcomeChannel);
 		const generalChannel = guildSettings.generalChannel;
+
+		if (!guildSettings || !guildSettings.welcomeChannel) return;
+
 		const memberEmbed = new Discord.MessageEmbed()
 			.setColor('#03cafc')
 			.setTitle('New Member! 🎉')
 			.setDescription(
-				`${member.user} is now a member of ${member.guild
-					.name}! Have a great time here, visit our <#${generalChannel}> for chats and more!`
+				`${member.user} is now a member of ${member.guild.name}!
+				 Have a great time here, visit our <#${generalChannel}> for chats and more!`
 			)
 			.setThumbnail(member.user.displayAvatarURL())
 			.setTimestamp();
 
-		welcomeChannel
+		if (!memberChannel || !generalChannel) {
+			console.log('Channels not set');
+			return;
+		}
+
+		await memberChannel
 			.send({
 				embeds : [
 					memberEmbed
 				]
-			})
-			.catch(console.error);
+			}).then(() => {
+				console.log(`${member.user.username} has joined ${member.guild.name}`);
+			}
+		);
 	}
 };
