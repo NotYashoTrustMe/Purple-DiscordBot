@@ -30,17 +30,15 @@ module.exports = {
 
 				{ name: 'Art 🎨', value: 'Graphic Designers, Paintings, Illustration, Animation and more ' },
 
-				{ name: 'Music 🎵', value: "Pianist? Know how to play that guitar 🎸? Well You're Welcome then " },
+				{ name: 'Music 🎵', value: "For those who're interested in music" },
 
 				{ name: 'Gaming 🎮', value: 'Where my boys at? ' },
 
 				{ name: 'Anime 👺', value: 'For the anime lovers out there! ' },
 
-				{ name: 'Programming 💻', value: 'All developers are welcome ' },
+				{ name: 'Programming 💻', value: 'If you\'re just starting or a full-stack, you\'re welcome' },
 
-				{ name: 'Memes 🐸', value: 'Never Gonna Give You Up!' },
-
-				{ name: 'Weeb 🏯', value: "Oh so you love Japan more than even you're country? lol me too " },
+				{ name: 'Memes 🐸', value: 'yourmom' },
 
 				{ name: '_ _', value: '_ _' }
 			])
@@ -79,21 +77,15 @@ module.exports = {
 					},
 					{
 						label       : 'Programming',
-						description : 'All developers are welcome',
+						description : 'If you\'re just starting or a full-stack, you\'re welcome',
 						value       : 'Programming',
 						emoji       : '💻'
 					},
 					{
 						label       : 'Memes',
-						description : 'Never Gonna Give You Up!',
+						description : 'yourmom',
 						value       : 'Memes',
 						emoji       : '🐸'
-					},
-					{
-						label       : 'Weeb',
-						description : "Oh so you love Japan more than even you're country? lol me too",
-						value       : 'Weeb',
-						emoji       : '🏯'
 					},
 					{
 						label       : 'None',

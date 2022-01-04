@@ -9,29 +9,29 @@ module.exports = {
 
 		// TODO: FIX THIS
 
-		// var memberStats = await MemberStats.findOne({
-		// 	guildID: message.guild.id,
-		// 	userID: message.author.id
-		// });
+		var memberStats = await MemberStats.findOne({
+			guildID: message.guild.id,
+			userID: message.author.id
+		});
 
-		// if (!memberStats) {
-		// 	memberStats = new MemberStats({
-		// 		guildID: message.guild.id,
-		// 		userID: message.author.id,
-		// 		roles: message.member.roles.cache.map(role => role.id),
-		// 		xp: 0,
-		// 		level: 1
-		// 	});
-		// 	newMemberStats.save();
-		// }
-		// else {
-		// 	memberStats.xp += 1;
-		// 	memberStats.roles = message.member.roles.cache.map(role => role.id);
-		// 	memberStats.level = Math.floor(0.1 * Math.sqrt(memberStats.xp));
-		// 	memberStats.save();
-		// }
+		if (!memberStats) {
+			memberStats = new MemberStats({
+				guildID: message.guild.id,
+				userID: message.author.id,
+				roles: message.member.roles.cache.map(role => role.id),
+				xp: 0,
+				level: 1
+			});
+			newMemberStats.save();
+		}
+		else {
+			memberStats.xp += 1;
+			memberStats.roles = message.member.roles.cache.map(role => role.id);
+			memberStats.level = Math.floor(0.1 * Math.sqrt(memberStats.xp));
+			memberStats.save();
+		}
 
-		// console.log(memberStats);
+		console.log(memberStats);
 
 		// Auto MODERATION
 		const banned = [];
