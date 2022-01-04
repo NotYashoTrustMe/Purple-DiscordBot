@@ -3,7 +3,7 @@ const { MessageActionRow, MessageEmbed, MessageSelectMenu } = require('discord.j
 
 module.exports = {
 	data    : new SlashCommandBuilder()
-		.setName('roles')
+		.setName('roles-setup')
 		.setDescription('Use this command in your self-role-assignment channel'),
 	async execute(interaction) {
 
