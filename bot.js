@@ -54,4 +54,8 @@ for (const file of eventFiles) {
 	}
 }
 
+setTimeout(() => {
+	console.log('\n')
+}, 5000);
+
 client.login(process.env.TOKEN);
