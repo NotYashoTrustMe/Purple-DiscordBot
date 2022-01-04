@@ -1,16 +1,16 @@
 {
-    "name": "Purple-DiscordBot",
-    "description": "An open-source discord bot with feaures such as memes, quotes, moderation and auto role assignment.",
-    "logo": "https://i.imgur.com/NoHbJTk.png",
-    "env": {
-        "TOKEN": {
-            "description": "Your Discord Bot's Token | Example:\nGTEsdNjQ2MjIxasdU2Njk2OTcl.dgscEQQ.0gjhNbGeWBsKP6FVuIyZWlG2cMd",
-            "required": true
-        },
-        "MONGO_URL": {
-            "description": "Your MongoDB Database Url | Example:\nmongodb+srv://username:password@database-name.fa23.mongodb.net/collection-name?retryWrites=true&w=majority",
-            "required": true
-        }
-    },
-    "repository": "https://github.com/Yasho022/Purple-DiscordBot"
-    }
+	"name": "Purple-DiscordBot",
+	"description": "An open-source discord bot for fun, moderation, auto role assignment and much more...",
+	"logo": "https://i.imgur.com/NoHbJTk.png",
+	"env": {
+		"TOKEN": {
+			"description": "Your Discord Bot's Token | Example: \nGTEsdNjQ2MjIxasdU2Njk2OTcl.dgscEQQ.0gjhNbGeWBsKP6FVuIyZWlG2cMd",
+			"required": true
+		},
+		"MONGO_URL": {
+			"description": "Your MongoDB Database Url | Example: \nmongodb+srv://<username>:<password>@<database-name>.fa23.mongodb.net/",
+			"required": true
+		}
+	},
+	"repository": "https://github.com/Yasho022/Purple-DiscordBot"
+}
