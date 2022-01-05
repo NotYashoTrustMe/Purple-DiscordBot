@@ -1,5 +1,17 @@
 {
-	"words": [	],
-	"links": [  ],
-	"otherLangs": [	]
+	"words": [
+		"1st banned word",
+		"2nd banned word",
+		"3rd banned word"
+		...
+	],
+	"links": [
+		"1st link",
+		"2nd link"
+		...
+	],
+	"otherLangs": [	
+		"Scheisse",
+		"more non-english curse words"
+	]
 }
