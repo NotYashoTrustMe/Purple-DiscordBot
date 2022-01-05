@@ -8,8 +8,6 @@ class Database {
 	}
 
 	connect() {
-		// print in purple color the message
-		console.log('['.black + '.'.cyan + '] '.black + 'Connecting to the database...');
 		mongoose
 			.connect(process.env.MONGO_URL, {
 				useNewUrlParser    : true,
