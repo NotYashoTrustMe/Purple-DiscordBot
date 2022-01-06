@@ -1,3 +1,4 @@
+var colors = require('colors');
 module.exports = {
 	name    : 'interactionCreate',
 
@@ -10,10 +11,12 @@ module.exports = {
 			const command = interaction.client.commands.get(interaction.commandName);
 			if (!command) return;
 			try {
-				await command.execute(interaction);
+				await command.execute(interaction)
+				// raise an error
+				
 			} catch (err) {
-				console.log('\u001B[31m' + err + '\u001B[0m');
-				await interaction.reply({ content: 'Sorry, Your command could not be processed :(', ephemeral: true });
+				console.log(err.red);
+				await interaction.reply({ content: 'Sorry, Something Went Wrong at our end :(\nReport it here: <https://github.com/NotYashoTrustMe/Purple-DiscordBot/issues/new>', ephemeral: true });
 			}
 		}
 		else if (interaction.isSelectMenu()) {

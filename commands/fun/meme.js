@@ -63,7 +63,6 @@ module.exports = {
 				console.log(HTTPError);
 				interaction.editReply("The subreddit is either NSFW or doesn't exist");
 			});
-		//
 	}
 };
 

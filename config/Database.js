@@ -16,10 +16,11 @@ class Database {
 			.then(() => {
 				console.log('['.black + '✓'.cyan + '] '.black + 'Connected to the database'.green);
 				this.connection = mongoose.connection;
+				return this.connection;
 			})
 			.catch((err) => {
 				console.log('['.black + 'x'.red + '] '.black + 'Error connecting to the database'.red + '\n' + err);
-				process.exit(1);
+				return(err);
 			});
 	}
 }
