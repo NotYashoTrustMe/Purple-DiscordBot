@@ -7,6 +7,8 @@
 
 An open-source discord bot for fun and moderation.
 
+ ## ⚠️ This project is no longer maintained ⚠️
+    
 <a href="https://discord.com/api/oauth2/authorize?client_id=908201780494606356&amp;permissions=397808498902&amp;scope=bot%20applications.commands">
 <img src="https://img.shields.io/static/v1?label=Invite&amp;message=Purple%235344&amp;color=%234248f5&amp;style=for-the-badge&amp;logo=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2020%2F12%2FDiscord-Logo.png" alt="Invite - Purple#5344" target="_blank">
 </a>
