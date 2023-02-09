@@ -95,7 +95,9 @@ It is advised to host this bot on heroku for a free or a paid plan according to 
 ___
 
 ### Contact Me 💌
-          
+
+Read my blog: https://notyasho.netlify.app/blogs
+[Contact](https://notyasho.netlify.app/contact)
 <a href = "https://discord.com/users/756407252587642911" target="_blank">
 <img src="https://img.shields.io/badge/Yasho_%231076-5340ff?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="">
 </a>
